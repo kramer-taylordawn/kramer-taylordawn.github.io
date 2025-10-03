@@ -1,29 +1,54 @@
-/* Navbar styling */
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Bar */
 nav {
   position: sticky;
   top: 0;
-  background-color: #2f4f4f;
-  padding: 15px 20px;
+  background-color: #1c1c1c;
+  padding: 10px 20px;
   z-index: 1000;
 }
 
 nav a {
-  color: white;
-  margin-right: 25px;
-  text-decoration: none;
+  color: #e0e0e0;
+  margin-right: 20px;
   font-weight: bold;
 }
 
 nav a.active {
-  border-bottom: 2px solid #FFD700;
+  border-bottom: 2px solid #1e90ff;
 }
 
-/* Section styling */
+/* Section Styling */
 section {
   padding: 100px 20px;
+  min-height: 100vh;
 }
 
-/* Optional: smooth scrolling for anchor links */
+/* Section Titles */
+section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
