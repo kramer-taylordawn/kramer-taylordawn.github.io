@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello World</title>
+    <meta charset="UTF-8">
+    <title>My Engineering Projects</title>
   </head>
   <body>
-    <h1>My GitHub Pages site works!</h1>
+    <div id="content">Loading...</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      fetch("README.md")
+        .then(response => response.text())
+        .then(text => {
+          document.getElementById("content").innerHTML = marked.parse(text);
+        });
+    </script>
   </body>
 </html>
