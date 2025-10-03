@@ -1,81 +1,80 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
 
-<link rel="stylesheet" href="assets/style.css">
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<!-- Navigation Bar -->
-<nav id="navbar">
-  <a href="#home" class="active">Home</a>
-  <a href="#projects">Projects</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <section id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hi, I'm [Your Name], a passionate engineer...</p>
+  </section>
 
-<!-- Sections -->
-<section id="home">
-# Welcome to My Portfolio 🚀
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are some of the projects I've worked on...</p>
+  </section>
 
-Hi, I’m [Your Name]! Explore my work below.
-</section>
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>I've had the opportunity to work at...</p>
+  </section>
 
-<section id="projects">
-# Projects ⚡
+  <section id="education">
+    <h2>Education</h2>
+    <p>I graduated from [University Name] with a degree in...</p>
+  </section>
 
-- 🚀 Rocket Design  
-- 🤖 Robotics Arm  
-- ⚡ Electronics Automation
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm passionate about creating solutions that make a difference...</p>
+  </section>
 
-<section id="experience">
-# Experience 💼
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me at [email@example.com]</p>
+  </section>
 
-- Company A – Software Engineer (2022–Present)  
-- Company B – Intern (2021–2022)
-</section>
+  <script>
+    // JavaScript for active link highlighting
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
 
-<section id="education">
-# Education 🎓
+    // Highlight active section in navbar
+    window.addEventListener('scroll', () => {
+      let current = '';
+      document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
-- University XYZ – B.Sc. in Mechanical Engineering (2018–2022)  
-- High School ABC – Graduated 2018
-</section>
-
-<section id="about">
-# About Me 👋
-
-I’m an engineer passionate about robotics, electronics, and design.
-</section>
-
-<section id="contact">
-# Contact 📬
-
-Email: your.email@example.com  
-LinkedIn: [your-linkedin](https://linkedin.com)
-</section>
-
-<!-- JavaScript for active tab highlighting -->
-<script>
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    if (pageYOffset >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
+</body>
+</html>
