@@ -1,0 +1,29 @@
+/* Navbar styling */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #2f4f4f;
+  padding: 15px 20px;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin-right: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  border-bottom: 2px solid #FFD700;
+}
+
+/* Section styling */
+section {
+  padding: 100px 20px;
+}
+
+/* Optional: smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
