@@ -83,8 +83,8 @@ section h2 {
   background: radial-gradient(
     circle,
     rgba(0,120,255,0) 0%,                            /* completely transparent inside */
-    rgba(0,120,255,0) calc(650px / 2 - 1px),         /* inner edge of gradient ring */
-    rgba(0,120,255,0.8) calc(650px / 2),             /* bright blue starts at image edge */
+    rgba(0,120,255,0) calc(500px / 2 - 1px),         /* inner edge of gradient ring */
+    rgba(0,120,255,0.8) calc(500px / 2),             /* bright blue starts at image edge */
     rgba(0,120,255,0.3) 75%,                        /* smoother transition */
     #11193b 100%                                     /* fully merges into background color */
   );
