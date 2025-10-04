@@ -4,6 +4,12 @@ body {
   color: #e0e0e0;
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
+
+  /* Faint grid */
+  background-image:
+    linear-gradient(rgba(22, 7, 77, 0.05) 1px, transparent 1px), /* horizontal lines */
+    linear-gradient(90deg, rgba(22, 7, 77, 0.05) 1px, transparent 1px); /* vertical lines */
+  background-size: 50px 50px; /* size of each grid square*/
 }
 
 /* Navbar Styling */
