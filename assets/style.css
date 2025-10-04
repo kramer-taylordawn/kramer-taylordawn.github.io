@@ -174,7 +174,7 @@ section h2 {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 45px;
+  gap: 40px;
   margin-top: 30px;
   width: 100%;
   max-width: 1200px;
@@ -234,7 +234,16 @@ section h2 {
 .masters-divider {
   border: 0;
   height: 2px;                 /* thickness of the line */
-  background-color: #00bfff;   /* bright blue */
+  background-color: #00bfff;   /* same as square */
   margin: 5px 0 10px 0;        /* space above and below the line */
   width: 80%;                  /* optional: make it shorter than full width */
 }
+
+.projects-intro {
+  color: #e0e0e0;       /* light grey text */
+  font-size: 1.2em;     /* slightly larger than paragraph */
+  max-width: 800px;     /* optional: limit line length */
+  text-align: center;   /* center under the title */
+  margin: 10px auto 30px auto; /* spacing above and below */
+}
+
