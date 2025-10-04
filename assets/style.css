@@ -7,9 +7,9 @@ body {
 
   /* Faint grid */
   background-image:
-    linear-gradient(rgba(22, 7, 77, 0.05) 1px, transparent 1px), /* horizontal lines */
-    linear-gradient(90deg, rgba(22, 7, 77, 0.05) 1px, transparent 1px); /* vertical lines */
-  background-size: 50px 50px; /* size of each grid square*/
+    linear-gradient(rgba(0,0,0,1) 1px, transparent 1px),   /* horizontal black lines */
+    linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px); /* vertical black lines */
+  background-size: 50px 50px; /* size of each grid square */
 }
 
 /* Navbar Styling */
