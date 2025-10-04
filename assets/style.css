@@ -240,14 +240,6 @@ section h2 {
   margin-bottom: 10px;
 }
 
-.masters-divider {
-  border: 0;
-  height: 2px;                 /* thickness of the line */
-  background-color: #00bfff;   /* same as square */
-  margin: 5px 0 10px 0;        /* space above and below the line */
-  width: 80%;                  /* optional: make it shorter than full width */
-}
-
 .projects-intro {
   color: #e0e0e0;       /* light grey text */
   font-size: 1.2em;     /* slightly larger than paragraph */
