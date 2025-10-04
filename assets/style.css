@@ -209,6 +209,13 @@ section h2 {
   line-height: 1.4;
 }
 
+.project-card img {
+  max-width: 100%;       /* image fits the card */
+  border-radius: 8px;    /* optional rounded corners */
+  margin: 10px 0;        /* space between title and description */
+  display: block;
+}
+
 .project-detail {
   display: none;
   margin-top: 20px;
