@@ -1,15 +1,15 @@
 /* Global Styles */
 body {
-  background-color: #16074d;
+  background-color: #413861;
   color: #e0e0e0;
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
 
   /* Faint grid */
   background-image:
-    linear-gradient(rgba(0,0,0,1) 1px, transparent 1px),   /* horizontal black lines */
-    linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px); /* vertical black lines */
-  background-size: 50px 50px; /* size of each grid square */
+    linear-gradient(rgba(83, 79, 99, 0.3) 0.5px, transparent 0.5px), /* horizontal lines */
+    linear-gradient(90deg, rgba(83, 79, 99, 0.3) 0.5px, transparent 0.5px); /* vertical lines */
+  background-size: 25px 25px; /* smaller grid squares */
 }
 
 /* Navbar Styling */
