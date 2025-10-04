@@ -133,6 +133,7 @@ and allow for physical activity.</p>
       <div class="modal-column">
         <h3>Final Mechanical Outcomes</h3>
         <p>The mechanical prototype consisted of aluminum tubing that provided full body support, size adjustability in 5 locations, mechanical disk brakes, and front swivel wheels for easy turning.<br>
+          <p>""</p><br>
         <img src="assets/surestride.jpg" alt="" style="max-width:100%; height:auto;"><br>
         Final SolidWorks CAD model<br>
         <img src="assets/walker.jpg" alt="" style="max-width:100%; height:auto;"><br>
@@ -158,7 +159,15 @@ and allow for physical activity.</p>
       <!-- Column 3 -->
       <div class="modal-column">
         <h3>Final Electrical Outcomes</h3>
-        <p>Results of electrical measurements, sensors, and circuitry...</p>
+        <p>The final electrical system used sensors to detect speed, wobble, and nearby obstacles, allowing the walker to identify potential fall risks. 
+          Based on these inputs, linear actuators automatically applied either light or strong braking resistance. 
+          User interaction was kept simple through power and calibration switches, along with traffic-style LED feedback: when the walker is powered on, the green LED turns on; 
+          during minor braking, the yellow LED activates; and during major braking, both yellow and red LEDs illuminate. All components were powered by a 12 V battery and 
+          controlled by an ESP32 microcontroller, which could also send braking data to a PC over Wi-Fi for monitoring and analysis.</p> <br>
+        <img src="assets/elec.png" alt="" style="max-width:100%; height:auto;"><br>
+        Location of electrical components on mechanical assembly <br>
+        <img src="assets/actuator.png" alt="" style="max-width:100%; height:auto;"><br>
+        Electrical assembly for linear actuators used to drive automatic resistance braking <br>
       </div>
     </div>
   
