@@ -92,15 +92,31 @@
 <! JavaScript for toggle functionality >
 <script>
   function toggleDetail(id) {
-    const detail = document.getElementById(id);
-    if (detail.style.display === "block") {
-      detail.style.display = "none";   // hide if already visible
+    const modal = document.getElementById(id);
+
+    // Hide any other open modals
+    document.querySelectorAll('.project-modal').forEach(m => {
+      if (m.id !== id) m.style.display = "none";
+    });
+
+    // Toggle this modal
+    if (modal.style.display === "block") {
+      modal.style.display = "none";
     } else {
-      detail.style.display = "block";  // show when clicked
-      detail.scrollIntoView({ behavior: 'smooth' }); // optional smooth scroll
+      modal.style.display = "block";
     }
   }
+
+  // Optional: close modal if you click outside
+  window.addEventListener('click', function(e) {
+    document.querySelectorAll('.project-modal').forEach(modal => {
+      if (modal.style.display === "block" && !modal.contains(e.target) && !e.target.classList.contains('view-project')) {
+        modal.style.display = "none";
+      }
+    });
+  });
 </script>
+
 
 
 
@@ -168,36 +184,6 @@
     });
 
   </script>
-
-  <! Your other HTML sections >
-
-<! JavaScript for project modal functionality >
-<script>
-  function toggleDetail(id) {
-    const modal = document.getElementById(id);
-
-    if (modal.style.display === "block") {
-      modal.style.display = "none"; // hide if already visible
-    } else {
-      // Hide any other modals
-      document.querySelectorAll('.project-modal').forEach(m => m.style.display = "none");
-
-      modal.style.display = "block"; // show clicked project
-    }
-  }
-
-  // Optional: close modal if you click outside of it
-  window.addEventListener('click', function(e) {
-    document.querySelectorAll('.project-modal').forEach(modal => {
-      if (modal.style.display === "block" && !modal.contains(e.target) && !e.target.classList.contains('project-card')) {
-        modal.style.display = "none";
-      }
-    });
-  });
-</script>
-
-</body>
-</html>
 
 
 </body>
