@@ -1,26 +1,17 @@
-/* Global Styles */
+/* Dark background and light text */
 body {
+  background-color: #121212;   /* dark gray / black */
+  color: #e0e0e0;             /* light text for contrast */
   font-family: 'Helvetica Neue', sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
   margin: 0;
   padding: 0;
 }
 
-a {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Navigation Bar */
+/* Navbar styling */
 nav {
   position: sticky;
   top: 0;
-  background-color: #1c1c1c;
+  background-color: #1c1c1c;  /* dark navbar */
   padding: 10px 20px;
   z-index: 1000;
 }
@@ -29,26 +20,14 @@ nav a {
   color: #e0e0e0;
   margin-right: 20px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 nav a.active {
   border-bottom: 2px solid #1e90ff;
 }
 
-/* Section Styling */
+/* Section padding */
 section {
   padding: 100px 20px;
-  min-height: 100vh;
-}
-
-/* Section Titles */
-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
 }
