@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+
+<! Navigation Bar >
+  <nav>
+    <a href ="#home" class="active">Home</a>
+    <a href ="#projects" class="active">Projects</a>
+    <a href = "#experience" class="active">Experience</a>
+    <a href = "#education" class="active">Education</a>
+    <a href = "#about" class="active">About</a>
+    <a href = "#contact" class="active">/Contact</a>
+  </nav>
+
+<! Sections >
+  <section id = "home">
+    <h2>Home</h2>
+    <p>Welcome!!!!!!!!!!!!!!!!!!!!!!!!</p>
+  </section>
+
+  <section id = "projects">
+    <h2>Projects</h2>
+    <p>PROJECTS!!!!!!!!</p>
+  </section>
+
+  <section id = "experience">
+    <h2>Experience</h2>
+    <p>EXPERIENCE!!!</p>
+  </section>
+
+  <section id = "education">
+    <h2>Education</h2>
+    <p>education!!!!!!!!</p>
+  </section>
+
+  <section id = "about">
+    <h2>About</h2>
+    <p>about!!!</p>
+  </section>
+
+  <section id = "contact">
+    <h2>Contact</h2>
+    <p>contact!!!</p>
+  </section>
+
+
+
+  <! JavaScript for smooth scrolling and active navbar >
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
