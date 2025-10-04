@@ -76,15 +76,16 @@ section h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 750px; /* stretched further */
-  height: 750px;
+  width: 850px; /* much larger for bloom effect */
+  height: 850px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   background: radial-gradient(
     circle,
-    rgba(0, 120, 255, 0.8) 0%,      /* bright edge */
-    rgba(0, 120, 255, 0.15) 50%,    /* more subtle halfway out */
-    rgba(17, 25, 59, 0) 100%        /* fully transparent (background color) */
+    rgba(0, 150, 255, 0.9) 0%,      /* intense bright core */
+    rgba(0, 120, 255, 0.5) 20%,     /* thick bright ring */
+    rgba(0, 80, 200, 0.2) 50%,      /* softer glow */
+    rgba(17, 25, 59, 0) 100%        /* fades fully to background */
   );
   z-index: -1;
   pointer-events: none;
