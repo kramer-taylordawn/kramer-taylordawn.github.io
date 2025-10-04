@@ -34,7 +34,7 @@ nav a.active {
 
 /* Section Styling */
 section {
-  padding: 100px 20px;
+  padding: 50px 20px;
   min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ section h2 {
 /* Name styling */
 .home-text h1 {
   margin: 0;
-  font-size: 7em;
+  font-size: 5em;
   line-height: 1.1;
 }
 
