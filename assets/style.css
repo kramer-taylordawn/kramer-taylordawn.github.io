@@ -48,3 +48,29 @@ section h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
 }
+
+/* Adding image on home to be slightly right centered*/
+.home-content {
+  display: flex;
+  align-items: center;       /* vertical alignment */
+  justify-content: center;   /* center horizontally */
+  gap: 50px;                 /* space between image and text */
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  /* move slightly to the right */
+  transform: translateX(50px);
+}
+
+.home-text {
+  max-width: 400px;
+  text-align: left;
+  /* move slightly to the left */
+  transform: translateX(-50px);
+}
