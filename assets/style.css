@@ -1,3 +1,9 @@
+.home-content {
+  position: relative;
+  overflow: visible; /* ensures glow isn't being cropped */
+}
+
+
 /* Global Styles */
 body {
   background-color: #11193b;
@@ -61,6 +67,7 @@ section h2 {
   width: 650px;
   height: 650px;
   border-radius: 50%;
+  z-index: 1 ;
 }
 
 .profile-wrapper::before {
