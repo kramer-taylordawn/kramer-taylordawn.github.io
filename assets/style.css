@@ -233,13 +233,6 @@ section h2 {
   overflow-y: auto; /* scroll if content is taller */
 }
 
-
-.project-detail img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
 .projects-intro {
   color: #e0e0e0;       /* light grey text */
   font-size: 1.2em;     /* slightly larger than paragraph */
