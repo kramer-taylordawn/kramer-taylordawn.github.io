@@ -49,12 +49,11 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* Adding image on home to be slightly right centered*/
 .home-content {
   display: flex;
   align-items: center;       /* vertical alignment */
   justify-content: center;   /* center horizontally */
-  gap: 50px;                 /* space between image and text */
+  gap: 80px;                 /* space between image and text */
 }
 
 .profile-pic {
@@ -64,13 +63,41 @@ section h2 {
   object-fit: cover;
   border: 2px solid #e0e0e0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  /* move slightly to the right */
-  transform: translateX(500px);
+  /* remove transform */
 }
 
 .home-text {
-  max-width: 400px;
+  max-width: 500px;
   text-align: left;
-  /* move slightly to the left */
-  transform: translateX(-800px);
 }
+
+/* Name styling */
+.home-text h1 {
+  margin: 0;
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+.home-text .first-name {
+  color: #ffffff; /* white */
+}
+
+.home-text .last-name {
+  color: #b0b0b0; /* grey */
+}
+
+/* MASc. Student */
+.home-text .title {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #e0e0e0;
+}
+
+/* Paragraph below */
+.home-text p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 20px;
+  color: #e0e0e0;
+}
+
