@@ -319,3 +319,12 @@ section h2 {
   color: #1c1c1c;
 }
 
+.project-highlight {
+  background-color: rgba(0, 120, 255, 0.1);
+  border-left: 4px solid #00bfff;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 1.05em;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
