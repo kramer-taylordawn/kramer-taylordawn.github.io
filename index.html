@@ -175,7 +175,16 @@ and allow for physical activity.</p>
         Electrical assembly for linear actuators used to drive automatic resistance braking <br>
         <h3>Electrical Validation</h3> 
         <p>Various test cases were trialed to validate the electrical design:<br>
-          <img src="assets/elecvalidation.png" alt="" style="max-width:100%; height:auto;"><br>
+          Results:<br>
+          Switches: Verified by measuring voltage changes when toggled — confirmed functional.<br>
+          LEDs: Powered using a 3.3 V source with resistors — all illuminated correctly.<br>
+          Linear Actuators: Tested with 12 V supply — successfully extended and retracted by reversing polarity.<br>
+          Buck Converter: Output measured at 3.3 ± 0.02 V with minimal oscillation — passed. <br>
+          Battery: 12 V output confirmed at 12 ± 0.05 V — passed. <br>
+          Acceleration Sensor: Detected clear differences between soft and strong pushes; minimal acceleration during steady walking.<br>
+          Time-of-Flight Sensor: Distance readings accurate to within 1 mm when compared to manual measurements.<br>
+          Wobble Detection (Gyroscope): Simulated lateral falls were successfully detected using Euler angle thresholds.<br>
+          
       </div>
     </div>
 
