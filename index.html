@@ -199,7 +199,7 @@ and allow for physical activity.</p>
   
     <!-- Project Outcome Highlight -->
     <div class="project-highlight">
-      <h3>Final Result</h3><br>
+      <h3>Final Result</h3>
       Our prototype demonstrated <strong>full structural safety</strong> under load testing, 
       <strong>reliable electrical performance</strong> across all use cases, and met all primary 
       <strong>design objectives for stability, adjustability, and usability</strong>.<br><br>
@@ -219,7 +219,139 @@ and allow for physical activity.</p>
 
   <div id="masters-thesis" class="project-modal"></div>
   
-  <div id="boundless-crutches" class="project-modal"></div>
+    
+  <! Hidden Project Details >
+  <div id="boundless-crutches" class="project-modal">
+    <h2>BoundLess Crutches: Engineering Capstone Project</h2>
+    <div class="skill-badges">
+      <span>Autodesk Inventor</span>
+      <span>MATLAB</span>
+      <span>Rapid Design Iteration</span>
+      <span>Hand Calculations</span>
+      <span>Rapid Prototyping</span>
+      <span>R&D</span>
+    </div>
+      
+    <div class="modal-grid">
+      <!-- Column 1 -->
+      <div class="modal-column">
+        <h3>The Problem</h3>
+        <p>Crutch users with limited upper body strength require a more portable mobility aid that does not rely on prolonged underarm support, as extended crutch use can result in nerve compression injuries such as crutch palsy, compromising both comfort and long-term safety.</p>
+        <h3>The Impact</h3>
+        <p>Prolonged use of underarm crutches can compress the radial nerve and lead to crutch palsy, a condition reported in up to 20% of long-term crutch users, causing numbness, weakness, and loss of arm control. At the same time, traditional crutches are awkward to transport and difficult to store, forcing users to sacrifice both safety and portability in their daily mobility.</p>
+        <h3>The Solution</h3>
+        <p>
+          <strong>Design a crutch alternative that maintains the familiar ease-of-use of standard axillary crutches, enhances portability for effortless transport, and incorporates force-distributing features that reduce peak loading on the shoulder to prevent nerve compression injuries such as crutch palsy.</strong>
+        </p>
+        <h3>Preliminary Design Iteration</h3>
+        <p>Many initial concepts were explored, including a collap</p><br>
+        <img src="assets/collapse.png" alt="" style="max-width:100%; height:auto;"><br>
+        <p>Preliminary CAD of collapsible design</p>
+        <img src="assets/print.png" alt="" style="max-width:100%; height:auto;"><br>
+        <p>Preliminary prototype (PLA)</p>
+        Once the prototype was built, it proved extremely unstable due to an imbalance in bending moments. This exercise reaffirmed the value of rapid prototyping. 
+        Feedback from stakeholders, including nurses from assisted living homes, emphasized that no device could restrain the user, 
+        while biomechanics experts advised that a collapsible design would likely be too weak and not feasible within the project timeframe. 
+        Based on this guidance, the collapsible mechanism was removed from the final design. <br>
+        <img src="assets/moment.png" alt="" style="max-width:100%; height:auto;"><br>
+        <p>Imbalance in bending moment</p>
+        
+        <h3>The Final Solution</h3>
+        <p>
+          <strong>Design a mechatronic device with automatic electrical and mechanical resistance braking that is size adjustable and provides greater upper body support</strong>
+        </p>
+        <img src="assets/walker-sketch.png" alt="" style="max-width:100%; height:auto;"><br>
+        Size ajustability diagram <br>
+        <h3>Adherence to Regulatory Standards</h3>
+        <p>
+<ul>
+  <li>The device followed ISO 11199-3:2005, covering strength, durability, stability, braking, adjustment.</li>
+  <li>IEC 80601-2-78:2019 compliance ensuresd electrical and mechanical safety for medical devices, including protection from shocks, fire, moving parts, and electromagnetic interference.</li>
+  <li>CAN/CSA-Z604-03 (R2008) specified Canadian requirements for transportable mobility aids (design, labeling, testing, performance).</li>
+  <li>The prototype used aluminum; full compliance requires final materials, exact dimensions, and complete testing.</li>
+</ul>
+
+</p>
+      </div>
+  
+      <!-- Column 2 -->
+      <div class="modal-column">
+        <h3>Final Mechanical Outcomes</h3>
+        <p>The mechanical prototype consisted of aluminum tubing that provided full body support, size adjustability in 5 locations, mechanical disk brakes, and front swivel wheels for easy turning.<br>
+        <img src="assets/surestride.jpg" alt="" style="max-width:100%; height:auto;"><br>
+        Final SolidWorks CAD model<br>
+        <img src="assets/walker.jpg" alt="" style="max-width:100%; height:auto;"><br>
+        Final manufactured assembly at Capstone Showcase<br>
+        <img src="assets/size.png" alt="" style="max-width:100%; height:auto;"><br>
+        CAD highlight of size adjustability<br>
+        <img src="assets/brakes.png" alt="" style="max-width:100%; height:auto;"><br>
+        Mechanical disk brakes<br>
+        </p>
+        <h3>Mechanical Validation</h3> 
+        <p>The device was validated for loading up to 100kg through Finite-Element Analysis (FEA):<br>
+          <img src="assets/mesh.png" alt="" style="max-width:100%; height:auto;"><br>
+          Mesh for FEA <br>
+          <img src="assets/fea3.png" alt="" style="max-width:100%; height:auto;"><br>
+          Complete FEA for 100 kg loading (491N per support)<br>
+          <img src="assets/fea1.png" alt="" style="max-width:100%; height:auto;"><br>
+          FEA result at bend: Safe loading for extreme maximum <br>
+          <img src="assets/fea2.png" alt="" style="max-width:100%; height:auto;"><br>
+          FEA result at hole: Safe loading for extreme maximum <br>
+        </p>
+      </div>
+  
+      <!-- Column 3 -->
+      <div class="modal-column">
+        <h3>Final Electrical Outcomes</h3>
+        <p>The final electrical system used sensors to detect speed, wobble, and nearby obstacles, allowing the walker to identify potential fall risks. 
+          Based on these inputs, linear actuators automatically applied either light or strong braking resistance. 
+          User interaction was kept simple through power and calibration switches, along with traffic-style LED feedback: when the walker is powered on, the green LED turns on; 
+          during minor braking, the yellow LED activates; and during major braking, both yellow and red LEDs illuminate. All components were powered by a 12 V battery and 
+          controlled by an ESP32 microcontroller, which could also send braking data to a PC over Wi-Fi for monitoring and analysis.</p> <br>
+        <img src="assets/elec.png" alt="" style="max-width:100%; height:auto;"><br>
+        Location of electrical components on mechanical assembly <br>
+        <img src="assets/eleclogic.png" alt="" style="max-width:100%; height:auto;"><br>
+        Electrical logic flow chart <br>
+        <img src="assets/elecpurpose.png" alt="" style="max-width:100%; height:auto;"><br>
+        Component purpose diagram <br>
+        <img src="assets/major.png" alt="" style="max-width:100%; height:auto;"><br>
+        Major and minor braking <br>
+        <img src="assets/actuator.png" alt="" style="max-width:100%; height:auto;"><br>
+        Electrical assembly for linear actuators used to drive automatic resistance braking <br>
+        <h3>Electrical Validation</h3> 
+        <p>Various test cases were trialed to validate the electrical design:<br>
+          Results:<br>
+          <strong>Switches:</strong> Verified by measuring voltage changes when toggled — confirmed functional.<br>
+          <strong>LEDs:</strong> Powered using a 3.3 V source with resistors — all illuminated correctly.<br>
+          <strong>inear Actuators:</strong> Tested with 12 V supply — successfully extended and retracted by reversing polarity.<br>
+          <strong>Buck Converter:</strong> Output measured at 3.3 ± 0.02 V with minimal oscillation — passed. <br>
+          <strong>Battery:</strong> 12 V output confirmed at 12 ± 0.05 V — passed. <br>
+          <strong>Acceleration Sensor:</strong> Detected clear differences between soft and strong pushes; minimal acceleration during steady walking.<br>
+          <strong>Time-of-Flight Sensor:</strong> Distance readings accurate to within 1 mm when compared to manual measurements.<br>
+          <strong>Wobble Detection (Gyroscope): </strong> Simulated lateral falls were successfully detected using Euler angle thresholds.<br>
+          
+      </div>
+    </div>
+
+  
+    <!-- Project Outcome Highlight -->
+    <div class="project-highlight">
+      <h3>Final Result</h3><br>
+      Our prototype demonstrated <strong>full structural safety</strong> under load testing, 
+      <strong>reliable electrical performance</strong> across all use cases, and met all primary 
+      <strong>design objectives for stability, adjustability, and usability</strong>.<br><br>
+      🏆 The project was <strong>selected among top submissions</strong> for presentation at the 
+      <strong>iBioMed Project Showcase</strong>, recognizing our team's innovation and hard work!
+
+      <h3>Personal Contributions</h3>
+      <p>During this project, I contributed greatly to the mechanical subteam. I performed the complete mechanical validation process and designed all CAD models. I contributed equally to the discussion of test
+      plans for validation testing, group reports, and manufacturing the device.</p>
+    </div>
+    
+    <!-- PDF link at bottom -->
+    <a href="assets/G02_FinalReport.pdf" target="_blank" class="btn pdf-btn">
+      📄 Click here to view our final report including engineering drawings and complete validation testing!
+    </a>
   
   <div id="signal-sparks" class="project-modal"></div>
 </section>
