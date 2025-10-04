@@ -68,13 +68,19 @@ section h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 760px;
-  height: 760px;
+  width: 800px; /* slightly larger fade radius */
+  height: 800px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(80,80,160,0.4), rgba(17,25,59,0));
+  background: radial-gradient(
+    circle,
+    rgba(130, 130, 255, 0.7) 0%,   /* bright glow at center */
+    rgba(80, 80, 160, 0.3) 40%,   /* mid fade */
+    rgba(17, 25, 59, 0) 100%      /* fully fades into background */
+  );
   z-index: -1;
 }
+
 
 .profile-pic {
   width: 100%;
