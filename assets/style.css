@@ -328,3 +328,22 @@ section h2 {
   color: #e0e0e0;
   line-height: 1.5;
 }
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+  justify-content: center; /* or flex-start if you want them left-aligned */
+}
+
+.skill-badges span {
+  background-color: rgba(0, 120, 255, 0.15);
+  border: 1px solid #00bfff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: #e0e0e0;
+  white-space: nowrap;
+}
+
