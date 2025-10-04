@@ -70,34 +70,33 @@ section h2 {
   z-index: 1;
 }
 
-/* Glow ring hugging the border */
+/* Only show glow in a 100px band around the image */
 .profile-wrapper::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 850px; /* much larger for bloom effect */
+  width: 850px;  /* image size + 100px ring all around */
   height: 850px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   background: radial-gradient(
     circle,
-    rgba(0, 150, 255, 0.9) 0%,      /* intense bright core */
-    rgba(0, 120, 255, 0.5) 20%,     /* thick bright ring */
-    rgba(0, 80, 200, 0.2) 50%,      /* softer glow */
-    rgba(17, 25, 59, 0) 100%        /* fades fully to background */
+    rgba(0,120,255,0) 0%,              /* fully transparent inside */
+    rgba(0,120,255,0) calc(650px / 2 - 1px), /* inner edge of ring */
+    rgba(0,120,255,0.8) calc(650px / 2),     /* start of glow at image edge */
+    rgba(17,25,59,0) 100%              /* fade to page background */
   );
   z-index: -1;
   pointer-events: none;
 }
-
 
 .profile-pic {
   width: 650px;
   height: 650px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid transparent; /* Remove existing hard border */
+  border: none;
 }
 
 
