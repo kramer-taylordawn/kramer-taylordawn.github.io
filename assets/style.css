@@ -59,7 +59,7 @@ section h2 {
   display: flex;
   align-items: center;       /* vertical alignment */
   justify-content: center;   /* center horizontally */
-  gap: 70px;                 /* space between image and text */
+  gap: 80px;                 /* space between image and text */
 }
 
 .profile-wrapper {
@@ -119,7 +119,7 @@ section h2 {
 }
 
 .home-text .last-name {
-  margin-left: 10px; /* space between first and last */
+  margin-left: 6px; /* space between first and last */
   color: rgba(0, 120, 255, 1);
 }
 
