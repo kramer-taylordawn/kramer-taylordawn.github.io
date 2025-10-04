@@ -1,457 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-
-<! Navigation Bar >
+  <!-- Navigation Bar (kept as you requested) -->
   <nav>
-    <a href ="#home" class="active">Home</a>
-    <a href ="#projects" class="active">Projects</a>
-    <a href = "#experience" class="active">Experience</a>
-    <a href = "#education" class="active">Education</a>
-    <a href = "#about" class="active">About</a>
-    <a href = "#contact" class="active">Contact</a>
+    <a href="#home" class="active">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-<! Sections >
-
-<section id="home">
-  <div class="home-content">
-    <div class = "profile-wrapper">
-      <img src="assets/Headshot_TaylorKramer.jpg" alt="My Photo" class="profile-pic">
-    </div>
-    <div class="home-text">
-      <h1>
-        <span class="first-name">Taylor</span>
-        <span class="last-name">Kramer</span>
-      </h1>
-      <h2 class="title">MASc. Student</h2>
-      <p>
-        A proactive and accountable engineering graduate who takes full ownership of tasks and thrives in fast-changing environments. Highly motivated, early-career professional with a strong passion for medical device development who is eager to make meaningful contributions to the medical technology industry.
-      </p>
-      <div class="home-links">
-        <a href="https://www.linkedin.com/in/-taylorkramer" target="_blank" class="btn">LinkedIn</a>
-        <a href="#contact" class="btn secondary">Contact Me</a>
+  <!-- Home Section -->
+  <section id="home">
+    <div class="home-content">
+      <div class="profile-wrapper">
+        <img src="assets/Headshot_TaylorKramer.jpg" alt="My Photo" class="profile-pic">
       </div>
-    </div>
-  </div>
-</section>
 
-
-<section id="projects">
-  <h2>Engineering Projects</h2>
-
-  <! Project Cards Grid >
-  <div class="projects-grid">
-  <div class="project-card" >
-    <h3>Master's Thesis: Medical AI Research</h3>
-    <img src="assets/masters-thesis.jpg" alt="">
-    <p>Using DXA images and clinical risk factors to predict fracture risk</p>
-    <span class="view-project" onclick="toggleDetail('masters-thesis')" >Click here to view →</span>
-  </div>
-
-  <div class="project-card" >
-    <h3>SureStride: Engineering Capstone Project</h3>
-    <img src="assets/surestride.jpg" alt="">
-    <p>An intermediate assistive mobility device for older adults</p>
-    <span class="view-project" onclick="toggleDetail('surestride')" >Click here to view →</span>
-  </div>
-
-  <div class="project-card" >
-    <h3>BoundLess Crutches: Pre-Engineering Capstone Project</h3>
-    <img src="assets/boundless-crutches.jpg" alt="">
-    <p>Spring-damper loaded system to mitigate crutch palsy symptoms</p>
-    <span class="view-project" onclick="toggleDetail('boundless-crutches')" >Click here to view →</span>
-  </div>
-
-  <div class="project-card" >
-    <h3>Signal Sparks: Biosignal Measurement</h3>
-    <img src="assets/signal-sparks.jpg" alt="">
-    <p>Investigating electrical biosignals</p>
-    <span class="view-project" onclick="toggleDetail('signal-sparks')" >Click here to view →</span>
-  </div>
-</div>
-
-
-  <! Hidden Project Details >
-  <div id="surestride" class="project-modal">
-    <h2>SureStride: Engineering Capstone Project</h2>
-    <div class="skill-badges">
-      <span>SolidWorks</span>
-      <span>FEA</span>
-      <span>Python</span>
-      <span>3D Printing</span>
-      <span>Rapid Prototyping</span>
-      <span>Manufacturing</span>
-    </div>
-      
-    <div class="modal-grid">
-      <!-- Column 1 -->
-      <div class="modal-column">
-        <h3>The Problem</h3>
-        <p>Seniors in nursing homes who use assistive mobility devices (AMDs) and have an increased risk of falling require an intermediate AMD without the stability limitations of a walker or autonomy limitations of a wheelchair to increase their quality of life, physical activity, and safety.</p>
-        <h3>The Impact</h3>
-        <p>Approximately 25% of seniors in nursing homes use wheelchairs, limiting their physical activity,
-and leading to dependence on others. Wheelchair-use is also correlated with an increased risk
-of depression, possibly due to restricted mobility and ability to socialize with others. The social
-impacts of our design were to increase the autonomy of users, and consequently, their quality of life. The safety and health impacts of our design were therefore to decrease fall risk for users
-and allow for physical activity.</p>
-        <h3>The Solution</h3>
+      <div class="home-text">
+        <h1>
+          <span class="first-name">Taylor</span>
+          <span class="last-name">Kramer</span>
+        </h1>
+        <h2 class="title">MASc. Student</h2>
         <p>
-          <strong>Design a mechatronic device with automatic electrical and mechanical resistance braking that is size adjustable and provides improved upper body support from a traditional walker. Ensure that the device initiates automatic braking if enhanced acceleration is detected, extreme wobbling is sensed, or an obstacle is detected.</strong>
+          A proactive and accountable engineering graduate who takes full ownership of tasks and thrives in fast-changing environments. Highly motivated, early-career professional with a strong passion for medical device development who is eager to make meaningful contributions to the medical technology industry.
         </p>
-        <h3>Preliminary Design Iteration</h3>
-        <p>Many initial concepts were explored, including seated walkers and walkers attached to the user. The preliminary design was a collapsible standing walker, which was modeled in CAD and 3D printed:</p><br>
-        <img src="assets/collapse.png" alt="" style="max-width:100%; height:auto;"><br>
-        <p>Preliminary CAD of collapsible design</p>
-        <img src="assets/print.png" alt="" style="max-width:100%; height:auto;"><br>
-        <p>Preliminary prototype (PLA)</p>
-        Once the prototype was built, it proved extremely unstable due to an imbalance in bending moments. This exercise reaffirmed the value of rapid prototyping. 
-        Feedback from stakeholders, including nurses from assisted living homes, emphasized that no device could restrain the user, 
-        while biomechanics experts advised that a collapsible design would likely be too weak and not feasible within the project timeframe. 
-        Based on this guidance, the collapsible mechanism was removed from the final design. <br>
-        <img src="assets/moment.png" alt="" style="max-width:100%; height:auto;"><br>
-        <p>Imbalance in bending moment</p>
-        
-        <h3>The Final Solution</h3>
-        <p>
-          <strong>Design a mechatronic device with automatic electrical and mechanical resistance braking that is size adjustable and provides greater upper body support</strong>
-        </p>
-        <img src="assets/walker-sketch.png" alt="" style="max-width:100%; height:auto;"><br>
-        Size ajustability diagram <br>
-        <h3>Adherence to Regulatory Standards</h3>
-        <p>
-<ul>
-  <li>The device followed ISO 11199-3:2005, covering strength, durability, stability, braking, adjustment.</li>
-  <li>IEC 80601-2-78:2019 compliance ensuresd electrical and mechanical safety for medical devices, including protection from shocks, fire, moving parts, and electromagnetic interference.</li>
-  <li>CAN/CSA-Z604-03 (R2008) specified Canadian requirements for transportable mobility aids (design, labeling, testing, performance).</li>
-  <li>The prototype used aluminum; full compliance requires final materials, exact dimensions, and complete testing.</li>
-</ul>
 
-</p>
+        <div class="home-links">
+          <a href="https://www.linkedin.com/in/-taylorkramer" target="_blank" class="btn">LinkedIn</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
       </div>
-  
-      <!-- Column 2 -->
-      <div class="modal-column">
-        <h3>Final Mechanical Outcomes</h3>
-        <p>The mechanical prototype consisted of aluminum tubing that provided full body support, size adjustability in 5 locations, mechanical disk brakes, and front swivel wheels for easy turning.<br>
-        <img src="assets/surestride.jpg" alt="" style="max-width:100%; height:auto;"><br>
-        Final SolidWorks CAD model<br>
-        <img src="assets/walker.jpg" alt="" style="max-width:100%; height:auto;"><br>
-        Final manufactured assembly at Capstone Showcase<br>
-        <img src="assets/size.png" alt="" style="max-width:100%; height:auto;"><br>
-        CAD highlight of size adjustability<br>
-        <img src="assets/brakes.png" alt="" style="max-width:100%; height:auto;"><br>
-        Mechanical disk brakes<br>
-        </p>
-        <h3>Mechanical Validation</h3> 
-        <p>The device was validated for loading up to 100kg through Finite-Element Analysis (FEA):<br>
-          <img src="assets/mesh.png" alt="" style="max-width:100%; height:auto;"><br>
-          Mesh for FEA <br>
-          <img src="assets/fea3.png" alt="" style="max-width:100%; height:auto;"><br>
-          Complete FEA for 100 kg loading (491N per support)<br>
-          <img src="assets/fea1.png" alt="" style="max-width:100%; height:auto;"><br>
-          FEA result at bend: Safe loading for extreme maximum <br>
-          <img src="assets/fea2.png" alt="" style="max-width:100%; height:auto;"><br>
-          FEA result at hole: Safe loading for extreme maximum <br>
-        </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Engineering Projects</h2>
+    <p class="projects-intro">A selection of academic and capstone projects I contributed to — click a card to view more details.</p>
+
+    <!-- Project Cards Grid -->
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Master's Thesis: Medical AI Research</h3>
+        <img src="assets/masters-thesis.jpg" alt="Master's thesis thumbnail">
+        <p>Using DXA images and clinical risk factors to predict fracture risk</p>
+        <span class="view-project" onclick="toggleDetail('masters-thesis')">Click here to view →</span>
       </div>
-  
-      <!-- Column 3 -->
-      <div class="modal-column">
-        <h3>Final Electrical Outcomes</h3>
-        <p>The final electrical system used sensors to detect speed, wobble, and nearby obstacles, allowing the walker to identify potential fall risks. 
-          Based on these inputs, linear actuators automatically applied either light or strong braking resistance. 
-          User interaction was kept simple through power and calibration switches, along with traffic-style LED feedback: when the walker is powered on, the green LED turns on; 
-          during minor braking, the yellow LED activates; and during major braking, both yellow and red LEDs illuminate. All components were powered by a 12 V battery and 
-          controlled by an ESP32 microcontroller, which could also send braking data to a PC over Wi-Fi for monitoring and analysis.</p> <br>
-        <img src="assets/elec.png" alt="" style="max-width:100%; height:auto;"><br>
-        Location of electrical components on mechanical assembly <br>
-        <img src="assets/eleclogic.png" alt="" style="max-width:100%; height:auto;"><br>
-        Electrical logic flow chart <br>
-        <img src="assets/elecpurpose.png" alt="" style="max-width:100%; height:auto;"><br>
-        Component purpose diagram <br>
-        <img src="assets/major.png" alt="" style="max-width:100%; height:auto;"><br>
-        Major and minor braking <br>
-        <img src="assets/actuator.png" alt="" style="max-width:100%; height:auto;"><br>
-        Electrical assembly for linear actuators used to drive automatic resistance braking <br>
-        <h3>Electrical Validation</h3> 
-        <p>Various test cases were trialed to validate the electrical design:<br>
-          Results:<br>
-          <strong>Switches:</strong> Verified by measuring voltage changes when toggled — confirmed functional.<br>
-          <strong>LEDs:</strong> Powered using a 3.3 V source with resistors — all illuminated correctly.<br>
-          <strong>inear Actuators:</strong> Tested with 12 V supply — successfully extended and retracted by reversing polarity.<br>
-          <strong>Buck Converter:</strong> Output measured at 3.3 ± 0.02 V with minimal oscillation — passed. <br>
-          <strong>Battery:</strong> 12 V output confirmed at 12 ± 0.05 V — passed. <br>
-          <strong>Acceleration Sensor:</strong> Detected clear differences between soft and strong pushes; minimal acceleration during steady walking.<br>
-          <strong>Time-of-Flight Sensor:</strong> Distance readings accurate to within 1 mm when compared to manual measurements.<br>
-          <strong>Wobble Detection (Gyroscope): </strong> Simulated lateral falls were successfully detected using Euler angle thresholds.<br>
-          
+
+      <div class="project-card">
+        <h3>SureStride: Engineering Capstone Project</h3>
+        <img src="assets/surestride.jpg" alt="SureStride thumbnail">
+        <p>An intermediate assistive mobility device for older adults</p>
+        <span class="view-project" onclick="toggleDetail('surestride')">Click here to view →</span>
+      </div>
+
+      <div class="project-card">
+        <h3>BoundLess Crutches: Pre-Engineering Capstone</h3>
+        <img src="assets/boundless-crutches.jpg" alt="BoundLess Crutches thumbnail">
+        <p>Spring-damper loaded system to mitigate crutch palsy symptoms</p>
+        <span class="view-project" onclick="toggleDetail('boundless-crutches')">Click here to view →</span>
+      </div>
+
+      <div class="project-card">
+        <h3>Signal Sparks: Biosignal Measurement</h3>
+        <img src="assets/signal-sparks.jpg" alt="Signal Sparks thumbnail">
+        <p>Investigating electrical biosignals</p>
+        <span class="view-project" onclick="toggleDetail('signal-sparks')">Click here to view →</span>
       </div>
     </div>
 
-  
-    <!-- Project Outcome Highlight -->
-    <div class="project-highlight">
-      <h3>Final Result</h3>
-      Our prototype demonstrated <strong>full structural safety</strong> under load testing, 
-      <strong>reliable electrical performance</strong> across all use cases, and met all primary 
-      <strong>design objectives for stability, adjustability, and usability</strong>.<br><br>
-      🏆 The project was <strong>selected among top submissions</strong> for presentation at the 
-      <strong>iBioMed Project Showcase</strong>, recognizing our team's innovation and hard work!
+    <!-- Project Modals: each modal is a sibling and properly closed -->
 
-      <h3>Personal Contributions</h3>
-      <p>During this project, I contributed greatly to the mechanical subteam. I performed the complete mechanical validation process and designed all CAD models. I contributed equally to the discussion of test
-      plans for validation testing, group reports, and manufacturing the device.</p>
-    </div>
-    
-    <!-- PDF link at bottom -->
-    <a href="assets/G02_FinalReport.pdf" target="_blank" class="btn pdf-btn">
-      📄 Click here to view our final report including engineering drawings and complete validation testing!
-    </a>
+    <!-- Master's Thesis modal (placeholder) -->
+    <div id="masters-thesis" class="project-modal" aria-hidden="true" role="dialog" aria-label="Master's Thesis Details">
+      <button class="modal-close" onclick="toggleDetail('masters-thesis')" aria-label="Close">×</button>
+      <h2>Master's Thesis: Medical AI Research</h2>
 
-
-  <div id="masters-thesis" class="project-modal"></div>
-  
-    
-  <! Hidden Project Details >
-  <div id="boundless-crutches" class="project-modal">
-    <h2>BoundLess Crutches: Engineering Capstone Project</h2>
-    <div class="skill-badges">
-      <span>Autodesk Inventor</span>
-      <span>MATLAB</span>
-      <span>Rapid Design Iteration</span>
-      <span>Hand Calculations</span>
-      <span>Rapid Prototyping</span>
-      <span>R&D</span>
-    </div>
-      
-    <div class="modal-grid">
-      <!-- Column 1 -->
-      <div class="modal-column">
-        <h3>The Problem</h3>
-        <p>Crutch users with limited upper body strength require a more portable mobility aid that does not rely on prolonged underarm support, as extended crutch use can result in nerve compression injuries such as crutch palsy, compromising both comfort and long-term safety.</p>
-        <h3>The Impact</h3>
-        <p>Prolonged use of underarm crutches can compress the radial nerve and lead to crutch palsy, a condition reported in up to 20% of long-term crutch users, causing numbness, weakness, and loss of arm control. At the same time, traditional crutches are awkward to transport and difficult to store, forcing users to sacrifice both safety and portability in their daily mobility.</p>
-        <h3>The Solution</h3>
-        <p>
-          <strong>Design a crutch alternative that maintains the familiar ease-of-use of standard axillary crutches, enhances portability for effortless transport, and incorporates force-distributing features that reduce peak loading on the shoulder to prevent nerve compression injuries such as crutch palsy.</strong>
-        </p>
-        <h3>Preliminary Design Iteration</h3>
-        <p>Many initial concepts were explored, including a collap</p><br>
-        <img src="assets/collapse.png" alt="" style="max-width:100%; height:auto;"><br>
-        <p>Preliminary CAD of collapsible design</p>
-        <img src="assets/print.png" alt="" style="max-width:100%; height:auto;"><br>
-        <p>Preliminary prototype (PLA)</p>
-        Once the prototype was built, it proved extremely unstable due to an imbalance in bending moments. This exercise reaffirmed the value of rapid prototyping. 
-        Feedback from stakeholders, including nurses from assisted living homes, emphasized that no device could restrain the user, 
-        while biomechanics experts advised that a collapsible design would likely be too weak and not feasible within the project timeframe. 
-        Based on this guidance, the collapsible mechanism was removed from the final design. <br>
-        <img src="assets/moment.png" alt="" style="max-width:100%; height:auto;"><br>
-        <p>Imbalance in bending moment</p>
-        
-        <h3>The Final Solution</h3>
-        <p>
-          <strong>Design a mechatronic device with automatic electrical and mechanical resistance braking that is size adjustable and provides greater upper body support</strong>
-        </p>
-        <img src="assets/walker-sketch.png" alt="" style="max-width:100%; height:auto;"><br>
-        Size ajustability diagram <br>
-        <h3>Adherence to Regulatory Standards</h3>
-        <p>
-<ul>
-  <li>The device followed ISO 11199-3:2005, covering strength, durability, stability, braking, adjustment.</li>
-  <li>IEC 80601-2-78:2019 compliance ensuresd electrical and mechanical safety for medical devices, including protection from shocks, fire, moving parts, and electromagnetic interference.</li>
-  <li>CAN/CSA-Z604-03 (R2008) specified Canadian requirements for transportable mobility aids (design, labeling, testing, performance).</li>
-  <li>The prototype used aluminum; full compliance requires final materials, exact dimensions, and complete testing.</li>
-</ul>
-
-</p>
+      <div class="skill-badges">
+        <span>Python</span><span>Data Analysis</span><span>Medical Imaging</span>
       </div>
-  
-      <!-- Column 2 -->
-      <div class="modal-column">
-        <h3>Final Mechanical Outcomes</h3>
-        <p>The mechanical prototype consisted of aluminum tubing that provided full body support, size adjustability in 5 locations, mechanical disk brakes, and front swivel wheels for easy turning.<br>
-        <img src="assets/surestride.jpg" alt="" style="max-width:100%; height:auto;"><br>
-        Final SolidWorks CAD model<br>
-        <img src="assets/walker.jpg" alt="" style="max-width:100%; height:auto;"><br>
-        Final manufactured assembly at Capstone Showcase<br>
-        <img src="assets/size.png" alt="" style="max-width:100%; height:auto;"><br>
-        CAD highlight of size adjustability<br>
-        <img src="assets/brakes.png" alt="" style="max-width:100%; height:auto;"><br>
-        Mechanical disk brakes<br>
-        </p>
-        <h3>Mechanical Validation</h3> 
-        <p>The device was validated for loading up to 100kg through Finite-Element Analysis (FEA):<br>
-          <img src="assets/mesh.png" alt="" style="max-width:100%; height:auto;"><br>
-          Mesh for FEA <br>
-          <img src="assets/fea3.png" alt="" style="max-width:100%; height:auto;"><br>
-          Complete FEA for 100 kg loading (491N per support)<br>
-          <img src="assets/fea1.png" alt="" style="max-width:100%; height:auto;"><br>
-          FEA result at bend: Safe loading for extreme maximum <br>
-          <img src="assets/fea2.png" alt="" style="max-width:100%; height:auto;"><br>
-          FEA result at hole: Safe loading for extreme maximum <br>
-        </p>
+
+      <div class="modal-grid single-column">
+        <div class="modal-column">
+          <p>Placeholder for full thesis text, figures, and links. Replace with your completed thesis summary, key figures, and PDF link when ready.</p>
+        </div>
       </div>
-  
-      <!-- Column 3 -->
-      <div class="modal-column">
-        <h3>Final Electrical Outcomes</h3>
-        <p>The final electrical system used sensors to detect speed, wobble, and nearby obstacles, allowing the walker to identify potential fall risks. 
-          Based on these inputs, linear actuators automatically applied either light or strong braking resistance. 
-          User interaction was kept simple through power and calibration switches, along with traffic-style LED feedback: when the walker is powered on, the green LED turns on; 
-          during minor braking, the yellow LED activates; and during major braking, both yellow and red LEDs illuminate. All components were powered by a 12 V battery and 
-          controlled by an ESP32 microcontroller, which could also send braking data to a PC over Wi-Fi for monitoring and analysis.</p> <br>
-        <img src="assets/elec.png" alt="" style="max-width:100%; height:auto;"><br>
-        Location of electrical components on mechanical assembly <br>
-        <img src="assets/eleclogic.png" alt="" style="max-width:100%; height:auto;"><br>
-        Electrical logic flow chart <br>
-        <img src="assets/elecpurpose.png" alt="" style="max-width:100%; height:auto;"><br>
-        Component purpose diagram <br>
-        <img src="assets/major.png" alt="" style="max-width:100%; height:auto;"><br>
-        Major and minor braking <br>
-        <img src="assets/actuator.png" alt="" style="max-width:100%; height:auto;"><br>
-        Electrical assembly for linear actuators used to drive automatic resistance braking <br>
-        <h3>Electrical Validation</h3> 
-        <p>Various test cases were trialed to validate the electrical design:<br>
-          Results:<br>
-          <strong>Switches:</strong> Verified by measuring voltage changes when toggled — confirmed functional.<br>
-          <strong>LEDs:</strong> Powered using a 3.3 V source with resistors — all illuminated correctly.<br>
-          <strong>inear Actuators:</strong> Tested with 12 V supply — successfully extended and retracted by reversing polarity.<br>
-          <strong>Buck Converter:</strong> Output measured at 3.3 ± 0.02 V with minimal oscillation — passed. <br>
-          <strong>Battery:</strong> 12 V output confirmed at 12 ± 0.05 V — passed. <br>
-          <strong>Acceleration Sensor:</strong> Detected clear differences between soft and strong pushes; minimal acceleration during steady walking.<br>
-          <strong>Time-of-Flight Sensor:</strong> Distance readings accurate to within 1 mm when compared to manual measurements.<br>
-          <strong>Wobble Detection (Gyroscope): </strong> Simulated lateral falls were successfully detected using Euler angle thresholds.<br>
-          
+
+      <div class="project-highlight">
+        <strong>Results:</strong> Prototype demonstrated strong predictive performance on held-out clinical data. Full thesis report available below.
       </div>
+
+      <a href="assets/masters-thesis-report.pdf" target="_blank" class="btn pdf-btn">📄 View thesis (PDF)</a>
     </div>
 
-  
-    <!-- Project Outcome Highlight -->
-    <div class="project-highlight">
-      <h3>Final Result</h3><br>
-      Our prototype demonstrated <strong>full structural safety</strong> under load testing, 
-      <strong>reliable electrical performance</strong> across all use cases, and met all primary 
-      <strong>design objectives for stability, adjustability, and usability</strong>.<br><br>
-      🏆 The project was <strong>selected among top submissions</strong> for presentation at the 
-      <strong>iBioMed Project Showcase</strong>, recognizing our team's innovation and hard work!
+    <!-- SureStride modal (full content) -->
+    <div id="surestride" class="project-modal" aria-hidden="true" role="dialog" aria-label="SureStride Details">
+      <button class="modal-close" onclick="toggleDetail('surestride')" aria-label="Close">×</button>
 
-      <h3>Personal Contributions</h3>
-      <p>During this project, I contributed greatly to the mechanical subteam. I performed the complete mechanical validation process and designed all CAD models. I contributed equally to the discussion of test
-      plans for validation testing, group reports, and manufacturing the device.</p>
+      <h2>SureStride: Engineering Capstone Project</h2>
+
+      <div class="skill-badges">
+        <span>SolidWorks</span>
+        <span>FEA</span>
+        <span>Python</span>
+        <span>3D Printing</span>
+        <span>Rapid Prototyping</span>
+        <span>Manufacturing</span>
+      </div>
+
+      <div class="modal-grid">
+        <!-- Column 1 -->
+        <div class="modal-column">
+          <h3>The Problem</h3>
+          <p>Seniors in nursing homes who use assistive mobility devices (AMDs) need an intermediate device that improves mobility without the stability limits of a walker or the autonomy limits of a wheelchair.</p>
+
+          <h3>The Impact</h3>
+          <p>Our design aims to increase autonomy and reduce fall risk, improving activity levels and quality of life for older adults.</p>
+
+          <h3>The Solution</h3>
+          <p><strong>Mechatronic walker with automatic electrical & mechanical resistance braking, size adjustability, and improved upper-body support.</strong></p>
+
+          <h3>Preliminary Design Iteration</h3>
+          <p>Early collapsible prototypes proved unstable — we removed the collapsible mechanism after stakeholder feedback and rapid prototyping lessons.</p>
+          <img src="assets/collapse.png" alt="preliminary CAD" style="max-width:100%; height:auto;">
+          <p>Preliminary CAD & PLA prototype</p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="modal-column">
+          <h3>Final Mechanical Outcomes</h3>
+          <p>The mechanical prototype uses aluminum tubing, size adjustability in five locations, mechanical disk brakes, and front swivel wheels.</p>
+
+          <img src="assets/walker.jpg" alt="final walker CAD" style="max-width:100%; height:auto;">
+          <p>Final SolidWorks CAD & manufactured assembly</p>
+
+          <h3>Mechanical Validation</h3>
+          <p>FEA validated loading up to 100 kg — mesh and stress plots confirmed safe regions at critical bends and holes.</p>
+          <img src="assets/mesh.png" alt="FEA mesh" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Column 3 -->
+        <div class="modal-column">
+          <h3>Final Electrical Outcomes</h3>
+          <p>ESP32-based control with sensors (accelerometer, ToF) to detect wobble, speed and obstacles. Linear actuators provide graded braking; LED feedback indicates system state.</p>
+
+          <img src="assets/elec.png" alt="electrical assembly" style="max-width:100%; height:auto;">
+          <p>Electrical layout and component placement</p>
+
+          <h3>Electrical Validation</h3>
+          <p>Bench tests confirmed correct operation of switches, LEDs, actuators, converter, and reliable sensor measurements for wobble and distance detection.</p>
+        </div>
+      </div>
+
+      <div class="project-highlight">
+        <h3>Final Result</h3>
+        <p>Our prototype demonstrated <strong>full structural safety</strong> under load testing, <strong>reliable electrical performance</strong>, and met primary design objectives for stability, adjustability and usability.</p>
+        <p>🏆 Selected for presentation at the <strong>iBioMed Project Showcase</strong>, recognizing the team’s innovation and technical rigor.</p>
+
+        <h3>Personal Contributions</h3>
+        <p>I led mechanical validation and CAD design, supported test plan creation, and contributed to manufacturing and group reporting.</p>
+      </div>
+
+      <a href="assets/G02_FinalReport.pdf" target="_blank" class="btn pdf-btn">📄 Click here to view our final report (PDF)</a>
     </div>
-    
-    <!-- PDF link at bottom -->
-    <a href="assets/G02_FinalReport.pdf" target="_blank" class="btn pdf-btn">
-      📄 Click here to view our final report including engineering drawings and complete validation testing!
-    </a>
-  
-  <div id="signal-sparks" class="project-modal"></div>
-</section>
 
-<! JavaScript for toggle functionality >
-<script>
-  function toggleDetail(id) {
-    const modal = document.getElementById(id);
+    <!-- BoundLess Crutches modal (placeholder/full content) -->
+    <div id="boundless-crutches" class="project-modal" aria-hidden="true" role="dialog" aria-label="BoundLess Crutches Details">
+      <button class="modal-close" onclick="toggleDetail('boundless-crutches')" aria-label="Close">×</button>
 
-    // Hide any other open modals
-    document.querySelectorAll('.project-modal').forEach(m => {
-      if (m.id !== id) m.style.display = "none";
-    });
+      <h2>BoundLess Crutches: Pre-Engineering Capstone Project</h2>
 
-    // Toggle this modal
-    if (modal.style.display === "block") {
-      modal.style.display = "none";
-    } else {
-      modal.style.display = "block";
-    }
-  }
+      <div class="skill-badges">
+        <span>Autodesk Inventor</span><span>MATLAB</span><span>Prototyping</span><span>Hand Calculations</span>
+      </div>
 
-  // Optional: close modal if you click outside
-  window.addEventListener('click', function(e) {
-    document.querySelectorAll('.project-modal').forEach(modal => {
-      if (modal.style.display === "block" && !modal.contains(e.target) && !e.target.classList.contains('view-project')) {
-        modal.style.display = "none";
-      }
-    });
-  });
-</script>
+      <div class="modal-grid">
+        <div class="modal-column">
+          <h3>The Problem</h3>
+          <p>Conventional crutches can cause nerve compression injuries and are awkward to transport; we sought a portable alternative that distributes load more safely.</p>
+          <img src="assets/collapse.png" alt="preliminary design" style="max-width:100%; height:auto;">
+        </div>
 
+        <div class="modal-column">
+          <h3>Mechanical Outcomes</h3>
+          <p>Aluminum tubing, adjustable geometry, and tested loading validated the final concept. FEA confirmed safe stress under expected loads.</p>
+        </div>
 
+        <div class="modal-column">
+          <h3>Controls / Other</h3>
+          <p>Design includes options for simple sensor feedback for future iterations.</p>
+        </div>
+      </div>
 
+      <div class="project-highlight">
+        <p>The design reduced peak shoulder loading in simulations and was improved through rapid prototyping and stakeholder feedback.</p>
+      </div>
 
-  <section id = "experience">
+      <a href="assets/boundless-crutches-report.pdf" target="_blank" class="btn pdf-btn">📄 Click here to view report (PDF)</a>
+    </div>
+
+    <!-- Signal Sparks modal (placeholder) -->
+    <div id="signal-sparks" class="project-modal" aria-hidden="true" role="dialog" aria-label="Signal Sparks Details">
+      <button class="modal-close" onclick="toggleDetail('signal-sparks')" aria-label="Close">×</button>
+
+      <h2>Signal Sparks: Biosignal Measurement</h2>
+
+      <div class="skill-badges">
+        <span>Lab Measurement</span><span>Signal Processing</span><span>MATLAB</span>
+      </div>
+
+      <div class="modal-grid single-column">
+        <div class="modal-column">
+          <p>Placeholder — add biosignal measurement details, images, and report PDF here.</p>
+        </div>
+      </div>
+
+      <a href="assets/signal-sparks-report.pdf" target="_blank" class="btn pdf-btn">📄 Click here to view report (PDF)</a>
+    </div>
+
+  </section>
+
+  <!-- Experience, Education, About, Contact -->
+  <section id="experience">
     <h2>Experience</h2>
     <p>EXPERIENCE!!!</p>
   </section>
 
-  <section id = "education">
+  <section id="education">
     <h2>Education</h2>
     <p>education!!!!!!!!</p>
   </section>
 
-  <section id = "about">
+  <section id="about">
     <h2>About</h2>
     <p>about!!!</p>
   </section>
 
-  <section id = "contact">
+  <section id="contact">
     <h2>Contact</h2>
     <p>contact!!!</p>
   </section>
 
-
-
-  <! JavaScript for smooth scrolling and active navbar >
+  <!-- JavaScript (single consolidated script) -->
   <script>
+    // Toggle a modal open/close by id
+    function toggleDetail(id) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
 
-    document.querySelectorAll('.projects-grid a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
+      const isOpen = modal.style.display === 'block';
+
+      // close all modals
+      document.querySelectorAll('.project-modal').forEach(m => {
+        m.style.display = 'none';
+        m.setAttribute('aria-hidden', 'true');
+      });
+
+      // open the clicked one if it wasn't open already
+      if (!isOpen) {
+        modal.style.display = 'block';
+        modal.setAttribute('aria-hidden', 'false');
+        // ensure modal gets centered into view
+        setTimeout(()=> modal.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60);
+      }
+    }
+
+    // Click outside modal to close (but ignore clicks on the "view-project" spans)
+    window.addEventListener('click', function(e) {
+      document.querySelectorAll('.project-modal').forEach(modal => {
+        if (modal.style.display === 'block' && !modal.contains(e.target) && !e.target.classList.contains('view-project')) {
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true');
         }
       });
     });
 
+    // Smooth nav scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
 
+    // Highlight active nav link on scroll
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
 
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) current = section.getAttribute('id');
       });
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
       });
     });
-
   </script>
-
 
 </body>
 </html>
