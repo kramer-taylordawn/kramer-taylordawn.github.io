@@ -255,3 +255,55 @@ section h2 {
 .view-project:hover {
   color: #1e90ff;
 }
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+  gap: 20px;
+  margin-top: 20px;
+  border-top: 2px solid #00bfff;   /* optional top line */
+  border-bottom: 2px solid #00bfff; /* optional bottom line */
+  padding: 20px 0;
+}
+
+.modal-column {
+  border-left: 1px solid #555; /* vertical line between columns */
+  padding: 0 15px;
+}
+
+/* Remove left border for first column */
+.modal-column:first-child {
+  border-left: none;
+}
+
+.modal-column h3 {
+  color: #00bfff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.modal-column p {
+  font-size: 1em;
+  line-height: 1.4;
+  color: #e0e0e0;
+}
+
+/* PDF button styling */
+.pdf-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background-color: #1c1c1c;
+  color: #00bfff;
+  text-decoration: none;
+  border: 2px solid #00bfff;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.pdf-btn:hover {
+  background-color: #00bfff;
+  color: #1c1c1c;
+}
+
