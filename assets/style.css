@@ -266,9 +266,21 @@ section h2 {
   padding: 20px 0;
 }
 
-.modal-column {
-  border-left: 1px solid #555; /* vertical line between columns */
-  padding: 0 15px;
+/* Responsive modal grid */
+@media (max-width: 900px) {
+  .modal-grid {
+    grid-template-columns: 1fr; /* stack columns vertically */
+  }
+
+  .modal-column {
+    border-left: none; /* remove vertical line when stacked */
+    border-top: 1px solid #555; /* optional horizontal separator */
+    padding: 15px 0;
+  }
+
+  .modal-column:first-child {
+    border-top: none; /* no line on first column */
+  }
 }
 
 /* Remove left border for first column */
