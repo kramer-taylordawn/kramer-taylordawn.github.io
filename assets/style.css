@@ -53,7 +53,7 @@ section h2 {
   display: flex;
   align-items: center;       /* vertical alignment */
   justify-content: center;   /* center horizontally */
-  gap: 30px;                 /* space between image and text */
+  gap: 50px;                 /* space between image and text */
 }
 
 .profile-pic {
@@ -74,7 +74,7 @@ section h2 {
 /* Name styling */
 .home-text h1 {
   margin: 0;
-  font-size: 5em;
+  font-size: 6em;
   line-height: 1.1;
 }
 
@@ -88,14 +88,14 @@ section h2 {
 
 /* MASc. Student */
 .home-text .title {
-  font-size: 2em;
+  font-size: 3em;
   margin: 10px 0;
   color: #e0e0e0;
 }
 
 /* Paragraph below */
 .home-text p {
-  font-size: 1em;
+  font-size: 2em;
   line-height: 1.5;
   margin-top: 20px;
   color: #e0e0e0;
