@@ -76,20 +76,22 @@ section h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 850px;  /* image size + 100px ring all around */
+  width: 850px;  /* image (650) + 100px glow band on all sides */
   height: 850px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   background: radial-gradient(
     circle,
-    rgba(0,120,255,0) 0%,              /* fully transparent inside */
-    rgba(0,120,255,0) calc(650px / 2 - 1px), /* inner edge of ring */
-    rgba(0,120,255,0.8) calc(650px / 2),     /* start of glow at image edge */
-    rgba(17,25,59,0) 100%              /* fade to page background */
+    rgba(0,120,255,0) 0%,                            /* completely transparent inside */
+    rgba(0,120,255,0) calc(650px / 2 - 1px),         /* inner edge of gradient ring */
+    rgba(0,120,255,0.8) calc(650px / 2),             /* bright blue starts at image edge */
+    rgba(0,120,255,0.3) 75%,                        /* smoother transition */
+    #11193b 100%                                     /* fully merges into background color */
   );
   z-index: -1;
   pointer-events: none;
 }
+
 
 .profile-pic {
   width: 650px;
