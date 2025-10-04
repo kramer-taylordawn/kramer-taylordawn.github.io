@@ -216,14 +216,23 @@ section h2 {
   display: block;
 }
 
-.project-detail {
-  display: none;
-  margin-top: 20px;
+.project-modal {
+  display: none; /* hidden by default */
+  position: fixed; /* overlay on top of everything */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;       /* almost full width */
+  height: 80%;      /* almost full height */
   background-color: #1c1c1c;
-  padding: 20px;
   border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 120, 255, 0.5);
+  z-index: 2000;
+  padding: 20px;
   color: #e0e0e0;
+  overflow-y: auto; /* scroll if content is taller */
 }
+
 
 .project-detail img {
   max-width: 100%;
