@@ -7,8 +7,8 @@ body {
 
   /* Faint grid */
   background-image:
-    linear-gradient(rgba(83, 79, 99, 0.3) 0.25px, transparent 0.25px), /* horizontal lines */
-    linear-gradient(90deg, rgba(83, 79, 99, 0.3) 0.25px, transparent 0.25px); /* vertical lines */
+    linear-gradient(rgba(83, 79, 99, 0.6) 0.5px, transparent 0.5px), /* horizontal lines */
+    linear-gradient(90deg, rgba(83, 79, 99, 0.6) 0.5px, transparent 0.5px); /* vertical lines */
   background-size: 40px 40px;
 }
 
