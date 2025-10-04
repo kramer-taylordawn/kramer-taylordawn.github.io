@@ -65,7 +65,7 @@
       </div>
 
       <div class="project-card">
-        <h3>BoundLess Crutches: Pre-Engineering Capstone</h3>
+        <h3>BoundLess Crutches: Pre-Capstone Project</h3>
         <img src="assets/boundless-crutches.jpg" alt="BoundLess Crutches thumbnail">
         <p>Spring-damper loaded system to mitigate crutch palsy symptoms</p>
         <span class="view-project" onclick="toggleDetail('boundless-crutches')">Click here to view →</span>
@@ -353,7 +353,7 @@
     <div id="signal-sparks" class="project-modal" aria-hidden="true" role="dialog" aria-label="Signal Sparks Details">
       <button class="modal-close" onclick="toggleDetail('signal-sparks')" aria-label="Close">×</button>
 
-      <h2>Signal Sparks: Biosignal Measurement</h2>
+      <h2>Signal Sparks: Biosignal Measurement Laboratories</h2>
 
       <div class="skill-badges">
         <span>Lab Measurement</span><span>Signal Processing</span><span>MATLAB</span><span>Oscilloscope</span><span>Real-Time Data Acquisition</span><span>Filtering Raw Data</span>
@@ -361,7 +361,44 @@
 
       <div class="modal-grid">
         <div class="modal-column">
-          <h3>The Problem</h3>
+          <h3>EMG Data Acquisition</h3>
+          <h2>Investigating EMG Signal</h2>
+          <p>The purpose of this exercise was to acquire EMG data using a printed circuit board and EMG electrodes, then observe how the EMG signal looks different in slow isometric contractions, slow dynamic contractions, and rapid dynamics contractions</p><br>
+          <p>During isometric contractions, the muscle generates force without changing length. During dynamic contractions, the muscle changes length.</p><br>
+
+          <img src="assets/emg1.png" alt="" style="max-width:100%; height:auto;"> <br>
+          <p>Time domain plot for slow isometric contraction</p>
+          <img src="assets/emg2.png" alt="" style="max-width:100%; height:auto;"> <br>
+          <p>Time domain plot for slow dynamic contraction, with 2Hz low-pass filter from PCB</p>
+          <img src="assets/emg3.png" alt="" style="max-width:100%; height:auto;"> <br>
+          <p>Time domain plot for rapid dynamic contraction, with 2Hz low-pass filter and 10Hz low-pass filter</p>
+
+          <p>Envelope plots were created to visualize the overall muscle activation patterns.
+          These plots are useful for dynamic contractions because muscle activity changes over time, while isometric contractions are relatively steady, so smoothing adds little information.</p>
+          <img src="assets/emg4.png" alt="" style="max-width:100%; height:auto;"> <br>
+          <p>Time domain (envelope) plot for slow dynamic contraction, with 2Hz low-pass filter from PCB</p>
+          <img src="assets/emg5.png" alt="" style="max-width:100%; height:auto;"> <br>
+          <p>Time domain (envelope) plot for rapid dynamic contraction, with 2Hz low-pass filter and 10Hz low-pass filter</p>
+
+          <p>The EMG signal was transformed to the frequency domain to observe how motor units are recruited. Amplitude and phase plots were calculated, but only phase plots are shown. </p>
+          <img src="assets/emg6.png" alt="" style="max-width:100%; height:auto;"> <br>
+          <p>Frequency amplitude plot for slow isometric contraction</p>
+          <img src="assets/emg7.png" alt="" style="max-width:100%; height:auto;"> <br>
+          <p>Frequency amplitude plot for slow dynamic contraction, with 2Hz low-pass filter from PCB</p>
+          <img src="assets/emg8.png" alt="" style="max-width:100%; height:auto;"> <br>
+          <p>Frequency amplitude plot for rapid dynamic contraction, with 2Hz low-pass filter and 10Hz low-pass filter</p>
+
+          <p>It was expected that the slow isometric contraction plot would have values concentrated in low frequency with little change and smaller amplitudes, which was observed.</p>
+          <p>It was expected that the slow dynamic contraction plot would have most EMG power in low frequencies, as motor units are recruited gradually and firing rates are relatively slow. This was also observed</p>
+          <p>Finally, it was expected that the rapid dynamic contraction plot would have higher frequencies that follow the rapid recruitment of additional motor units and increased firing rates, what was also seen.</p>
+
+          <div class="project-highlight">
+            <h3>Final Result</h3>
+            <p>
+            In conclusion, the muscle activity behaved as expected, and this was a good exercise in understanding how EMG reflects different contraction types. The envelope plots clearly showed the timing and intensity of activation during slow dynamic movements, while the frequency analysis highlighted that slow contractions predominantly involve low-frequency motor unit activity.
+            </p>
+          
+          
         </div>
       
         <div class="modal-column">
