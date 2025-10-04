@@ -74,7 +74,7 @@ section h2 {
 /* Name styling */
 .home-text h1 {
   margin: 0;
-  font-size: 6em;
+  font-size: 5em;
   line-height: 1.1;
 }
 
@@ -88,14 +88,14 @@ section h2 {
 
 /* MASc. Student */
 .home-text .title {
-  font-size: 3em;
+  font-size: 2em;
   margin: 10px 0;
   color: #e0e0e0;
 }
 
 /* Paragraph below */
 .home-text p {
-  font-size: 2em;
+  font-size: 1.25em;
   line-height: 1.5;
   margin-top: 20px;
   color: #e0e0e0;
