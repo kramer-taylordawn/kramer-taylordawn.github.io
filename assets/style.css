@@ -7,8 +7,8 @@ body {
 
   /* Faint grid */
   background-image:
-    linear-gradient(rgba(42, 35, 69, 0.6) 0.5px, transparent 0.5px), /* horizontal lines */
-    linear-gradient(90deg, rgba(42, 35, 69, 0.6) 0.5px, transparent 0.5px); /* vertical lines */
+    linear-gradient(rgba(42, 35, 69, 0.6) 1px, transparent 1px), /* horizontal lines */
+    linear-gradient(90deg, rgba(42, 35, 69, 0.6) 1px, transparent 1px); /* vertical lines */
   background-size: 40px 40px;
 }
 
@@ -57,6 +57,7 @@ section h2 {
 }
 
 .profile-pic {
+  position: relative;
   width: 650px;
   height: 650px;
   border-radius: 50%;
@@ -64,6 +65,19 @@ section h2 {
   border: 2px solid #e0e0e0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   /* remove transform */
+}
+
+.profile-pic::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 760px;  /* slightly larger than image */
+  height: 760px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(80,80,160,0.4), rgba(17,25,59,0)); /* soft bluish glow */
+  z-index: -1;
 }
 
 .home-text {
