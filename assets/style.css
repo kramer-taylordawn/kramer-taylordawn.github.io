@@ -247,3 +247,16 @@ section h2 {
   text-align: center;   /* center under the title */
   margin: 10px auto 30px auto; /* spacing above and below */
 }
+
+.view-project {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00bfff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.view-project:hover {
+  color: #1e90ff;
+}
