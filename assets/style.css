@@ -171,65 +171,78 @@ section h2 {
   color: #11193b;
 }
 
+.projects-intro {
+  color: #e0e0e0;
+  font-size: 1.2em;
+  max-width: 800px;
+  text-align: center;
+  margin: 10px auto 30px auto;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-top: 30px;
-  width: 100%;
-  max-width: 1200px;
+  gap: 30px;
+  margin-top: 20px;
 }
-
 
 .project-card {
   background-color: #1c1c1c;
   padding: 20px;
   border-radius: 12px;
-  text-decoration: none;
   color: #e0e0e0;
+  text-decoration: none;
+  cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 120, 255, 0.5);
-}
-
-.project-card h3 {
-  margin-bottom: 10px;
-  color: #00bfff;
-}
-
-.project-card p {
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.project-card img {
-  max-width: 100%;       /* image fits the card */
-  border-radius: 8px;    /* optional rounded corners */
-  margin: 10px 0;        /* space between title and description */
-  display: block;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 120, 255, 0.5);
 }
 
 .project-detail {
-  display: none;
-  margin-top: 20px;
-  background-color: #1c1c1c;
+  margin-top: 50px;
   padding: 20px;
   border-radius: 12px;
+  background-color: #1c1c1c;
   color: #e0e0e0;
 }
 
-.project-detail img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.project-detail h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
 }
+
+.project-detail p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.project-images img {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.project-detail .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 2px solid #1e90ff;
+  color: #1e90ff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.project-detail .btn:hover {
+  background-color: #1e90ff;
+  color: #11193b;
+}
+
 
 .masters-divider {
   border: 0;
