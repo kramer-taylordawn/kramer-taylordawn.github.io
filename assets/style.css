@@ -370,10 +370,22 @@ section h2 {
   gap: 12px;
 }
 
-/* Normalize spacing inside top-left column */
-.experience-top > div:first-child > * {
-  margin: 4px 0; /* small consistent spacing between position, company, location, skills */
+.experience-top > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ensures top alignment */
 }
+
+/* Optional: add a tiny gap between elements for consistent spacing */
+.experience-top > div:first-child > * {
+  margin-bottom: 4px;
+}
+
+/* Ensure the date stays top-aligned */
+.date {
+  align-self: flex-start;
+}
+
 
 .position {
   font-size: 1.3rem;
