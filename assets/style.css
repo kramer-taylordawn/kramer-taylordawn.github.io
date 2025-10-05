@@ -371,33 +371,34 @@ section h2 {
   gap: 12px;
 }
 
-/* Left column takes full width minus date */
+/* Left column for everything except date */
 .experience-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1; /* ensures left column stretches fully */
+  flex: 1;
+  display: block; /* stack items naturally */
 }
 
-/* Small gap between elements */
+/* Reset margins for all items */
 .experience-left > * {
   margin-bottom: 4px;
+  text-align: left; /* ensures everything flush left */
 }
 
-/* Date */
+/* Date stays top-right */
 .date {
   font-size: 1rem;
   white-space: nowrap;
   color: #dddddd;
   flex-shrink: 0;
   align-self: flex-start;
+  text-align: right;
 }
 
-/* Position / Company / Location */
+/* Titles, Company, Location */
 .position {
   font-size: 1.3rem;
   font-weight: bold;
   color: #ffffff;
+  text-align: left;
 }
 
 .company {
@@ -420,11 +421,7 @@ section h2 {
   gap: 4px;
 }
 
-.icon {
-  margin-right: 4px;
-}
-
-/* ---------------- Skills ---------------- */
+/* Skills */
 .experience-skills {
   display: flex;
   flex-wrap: wrap;
@@ -441,7 +438,7 @@ section h2 {
   white-space: nowrap;
 }
 
-/* ---------------- Experience Details / Bullets ---------------- */
+/* Bullets / Experience Details */
 .experience-details {
   margin-top: 12px;
   padding-left: 20px;
@@ -452,6 +449,7 @@ section h2 {
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.3s ease;
+  text-align: left; /* flush left */
 }
 
 .experience-details li {
@@ -463,7 +461,7 @@ section h2 {
   font-weight: bold;
 }
 
-/* ---------------- Expanded state ---------------- */
+/* Expanded state */
 .experience-card.expanded .experience-details {
   max-height: 1000px;
   opacity: 1;
