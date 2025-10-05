@@ -347,7 +347,6 @@ section h2 {
   white-space: nowrap;
 }
 
-/* Experience Card Container */
 .experience-card {
   background: #1e1e1e;
   border: 1px solid #2a2a2a;
@@ -363,7 +362,7 @@ section h2 {
   background: #2a2a2a;
 }
 
-/* Header Layout */
+/* Flex for top row */
 .experience-top {
   display: flex;
   justify-content: space-between;
@@ -371,9 +370,9 @@ section h2 {
   gap: 12px;
 }
 
-.experience-top > div > * {
-  margin: 0; /* reset spacing */
-  padding: 0;
+/* Normalize spacing inside top-left column */
+.experience-top > div:first-child > * {
+  margin: 4px 0; /* small consistent spacing between position, company, location, skills */
 }
 
 .position {
@@ -390,14 +389,30 @@ section h2 {
   gap: 6px;
 }
 
-.location,
+.company-logo {
+  font-size: 1rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #dddddd;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .date {
   font-size: 1rem;
   white-space: nowrap;
   color: #dddddd;
+  flex-shrink: 0;
 }
 
-/* Skills Row */
+.icon {
+  margin-right: 4px;
+}
+
+/* Skills badges */
 .experience-skills {
   display: flex;
   flex-wrap: wrap;
@@ -406,7 +421,7 @@ section h2 {
 }
 
 .experience-skills span {
-  background: #4aa3ff; /* Blue theme */
+  background: #4aa3ff;
   color: #0b0b0b;
   padding: 4px 10px;
   border-radius: 6px;
@@ -415,35 +430,40 @@ section h2 {
   white-space: nowrap;
 }
 
-/* Details List */
+/* Hidden by default */
 .experience-details {
   margin-top: 12px;
-  padding-left: 0;
-  list-style: none;
-  font-size: 0.9rem;
+  padding-left: 20px; /* bullets aligned here */
   color: #dcdcdc;
+  font-size: 0.9rem;
+  list-style: none;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease, opacity 0.3s ease;
-}
-
-.experience-card.expanded .experience-details {
-  max-height: 600px; /* enough space */
-  opacity: 1;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
 }
 
 .experience-details li {
-  margin: 6px 0;
-  padding-left: 18px; /* consistent indent */
-  position: relative;
+  position: relative; /* needed for custom bullets */
+  margin-bottom: 6px;
+  padding-left: 18px; /* space for bullet */
 }
 
+/* Custom bullet */
 .experience-details li::before {
   content: "•";
   color: #4aa3ff;
+  font-weight: bold;
   position: absolute;
   left: 0;
   top: 0;
   font-size: 1.1rem;
+  line-height: 1.2;
 }
+
+/* Expanded state */
+.experience-card.expanded .experience-details {
+  max-height: 1000px; /* enough to fit content */
+  opacity: 1;
+}
+
