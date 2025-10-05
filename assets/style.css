@@ -352,7 +352,7 @@ section h2 {
   border: 1px solid #2a2a2a;
   border-radius: 10px;
   padding: 18px;
-  margin-bottom:25px;
+  margin-bottom: 25px;
   cursor: pointer;
   transition: background 0.2s ease;
   overflow: hidden;
@@ -399,28 +399,35 @@ section h2 {
 /* Hidden by default */
 .experience-details {
   margin-top: 12px;
-  padding-left: 18px;
+  padding-left: 0; /* No left padding */
   color: #dcdcdc;
   font-size: 0.9rem;
-  list-style-type: none; /* remove default bullets */
+  list-style: none; /* Remove browser bullets */
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.35s ease, opacity 0.3s ease;
 }
 
-/* Custom bullets */
+.experience-details li {
+  position: relative;
+  padding-left: 20px; /* Space for bullet */
+  margin-bottom: 6px; /* Even spacing */
+}
+
+/* Custom bullet */
 .experience-details li::before {
   content: "•";
-  color: #4aa3ff; /* Match your blue theme */
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  color: #4aa3ff;
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 /* When expanded */
 .experience-card.expanded .experience-details {
-  max-height: 500px; /* Tall enough for most cases */
+  max-height: 500px;
   opacity: 1;
 }
