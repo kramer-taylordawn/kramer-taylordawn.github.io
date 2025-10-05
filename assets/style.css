@@ -708,14 +708,13 @@ section h2 {
 /* Right column: image */
 .contact-right {
   flex: 1;
-  min-width: 280px;
   display: flex;
   justify-content: center;
 }
 
 .contact-image {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #4aa3ff;
