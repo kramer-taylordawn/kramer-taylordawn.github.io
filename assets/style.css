@@ -368,6 +368,13 @@ section h2 {
   align-items: flex-start;
 }
 
+/* Normalize spacing inside experience headers */
+.experience-top > div > * {
+  margin: 0;
+  padding: 0;
+}
+
+
 .position {
   font-size: 1.8rem;
   font-weight: bold;
