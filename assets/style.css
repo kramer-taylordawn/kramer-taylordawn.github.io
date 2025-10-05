@@ -442,6 +442,10 @@ section h2 {
   white-space: nowrap;
 }
 
+.experience-skills-wrapper {
+  margin-top: 6px;
+}
+
 /* Hidden by default */
 .experience-details {
   margin-top: 12px;
