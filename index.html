@@ -85,83 +85,47 @@
     <div id="masters-thesis" class="project-modal" aria-hidden="true" role="dialog" aria-label="Master's Thesis Details">
       <button class="modal-close" onclick="toggleDetail('masters-thesis')" aria-label="Close">×</button>
       <h2>Master's Thesis: Medical AI Research</h2>
-
+    
       <div class="skill-badges">
-        <span>Python</span><span>Git</span><span>Version Control</span><span>Data Analysis</span><span>Medical Imaging</span><span>Image Processing</span><span>Technical Writing</span><span>R&D</span>
+        <span>Python</span><span>Git</span><span>Version Control</span><span>Data Analysis</span>
+        <span>Medical Imaging</span><span>Image Processing</span><span>Technical Writing</span><span>R&D</span>
       </div>
-
-      <div class="modal-grid">
-        <!-- Column 1 -->
-        <div class="modal-column">
-          <h3>The Problem</h3>
-          <p>Bone remodeling is a healthy, dynamic process where old bone is replaced by new bone. In the human body, this process is governed by the osteoblasts and the osteoclasts; 
-          specific cell types responsible for building and resorbing bone.</p>
-          <img src="assets/bone1.png" alt="" style="max-width:100%; height:auto;">
-          <p>As humans age, their osteoblasts and osteoclasts work synchronously to build their bones stronger. However, when peak bone mass is reached at about the age of 30,
-          bone resorption can begin to outpace bone formation, which is when osteoporosis occurs.</p>
-          <img src="assets/bone2.png" alt="" style="max-width:100%; height:auto;">
-          <p>Osteoporosis causes the bones to become very porous and susceptible to fracture, which is why early diagnosis is very important</p>
-          <p>Osteoporosis is diagnosed through Dual X-Ray Absorptiometry (DXA) imaging, which is a low radiation X-Ray imaging machine that can calculate the patient's Bone Mineral Density (BMD).</p>
-          <img src="assets/bone3.gif" alt="" style="max-width:100%; height:auto;">
-          <p>Osteoporosis is then diagnosed based on BMD, however many individuals with a normal BMD value for their age, sex, and ethnicity will still experience a fragility fracture.</p>
-          <p>This proves that bone fragility and inherent fracture risk cannot be determined from BMD alone.</p>
-          
-          <h3>The Impact</h3>
-          <p>Fragility fractures are often the first symptom of osteoporosis, which makes it challenging to accurately diagnose the disease before a fracture has occurred.</p>
-          <p>Hip fractures can be deadly. In Canada, 30,000 occur annually, and 50% of patients lose the ability to walk independently.</p>
-          <p>Mortality rates can reach as high as 30% within just the first 6 months post-fracture, and hip fractures result in $1.1 billion in direct healthcare costs annually.</p>
-          <h3>The Solution</h3>
-          <p>Machine learning has the potential to improve fracture risk prediction.</p>
-          <img src="assets/bone4.png" alt="" style="max-width:100%; height:auto;">
-          <p>Computers have the ability to decipher complex, non-linear, high-dimensional relationships that the human brain cannot.</p>
-          <p>This thesis aims to investigate if DXA images, alongside clinical risk factors, have the potential to improve fracture risk prediction.</p>
-
-          <h3>Primary Research Objective</h3>
-          <p><strong>Evaluate the predictive power of DXA images and Clinical Risk Factors (CRFs) in quantifying hip fracture risk</strong></p>
+    
+      <!-- Single Column Layout -->
+      <div class="modal-content">
+        <h3>The Problem</h3>
+        <p>Bone remodeling is a healthy, dynamic process where old bone is replaced by new bone. In the human body, this process is governed by the osteoblasts and the osteoclasts; 
+        specific cell types responsible for building and resorbing bone.</p>
+        <img src="assets/bone1.png" alt="" style="max-width:100%; height:auto;">
+        <p>As humans age, their osteoblasts and osteoclasts work synchronously to build their bones stronger. However, when peak bone mass is reached at about the age of 30,
+        bone resorption can begin to outpace bone formation, which is when osteoporosis occurs.</p>
+        <img src="assets/bone2.png" alt="" style="max-width:100%; height:auto;">
+        <p>Osteoporosis causes the bones to become very porous and susceptible to fracture, which is why early diagnosis is very important.</p>
+        <p>Osteoporosis is diagnosed through Dual X-Ray Absorptiometry (DXA) imaging, which is a low radiation X-Ray imaging machine that can calculate the patient's Bone Mineral Density (BMD).</p>
+        <img src="assets/bone3.gif" alt="" style="max-width:100%; height:auto;">
+        <p>Osteoporosis is then diagnosed based on BMD, however many individuals with a normal BMD value for their age, sex, and ethnicity will still experience a fragility fracture.</p>
+        <p>This proves that bone fragility and inherent fracture risk cannot be determined from BMD alone.</p>
+    
+        <h3>The Impact</h3>
+        <p>Fragility fractures are often the first symptom of osteoporosis, which makes it challenging to accurately diagnose the disease before a fracture has occurred.</p>
+        <p>Hip fractures can be deadly. In Canada, 30,000 occur annually, and 50% of patients lose the ability to walk independently.</p>
+        <p>Mortality rates can reach as high as 30% within just the first 6 months post-fracture, and hip fractures result in $1.1 billion in direct healthcare costs annually.</p>
+    
+        <h3>The Solution</h3>
+        <p>Machine learning has the potential to improve fracture risk prediction.</p>
+        <img src="assets/bone4.png" alt="" style="max-width:100%; height:auto;">
+        <p>Computers have the ability to decipher complex, non-linear, high-dimensional relationships that the human brain cannot.</p>
+        <p>This thesis aims to investigate if DXA images, alongside clinical risk factors, have the potential to improve fracture risk prediction.</p>
+    
+        <h3>Primary Research Objective</h3>
+        <p><strong>Evaluate the predictive power of DXA images and Clinical Risk Factors (CRFs) in quantifying hip fracture risk</strong></p>
+    
+        <div class="project-highlight">
+          <strong>Final Results and Thesis Publication Coming Soon!</strong>
         </div>
-        <!-- Column 2 -->
-        <div class="modal-column">
-          <h3>Methods</h3>
-          <p>Data Organization and Image Pre-Processing</p>
-          <p>Study Data: Obtained from clinical trial data(further details released once thesis work is published to maintain anonymity).</p>
-          <p>Inclusion Criteria:</p>
-          <img src="assets/studydata.png" alt="" style="max-width:100%; height:auto;">
-          <p>Image Pre-processing:</p>
-          <p>Images were cropped from the complete DXA report using MATLAB, resized, and center cropped to have a dimension of 224 × 224 pixels. 
-            Images were converted to single-channel and filtered using a Non-Local Means filter to minimize noise while preserving sharp edges and details. 
-            Images were saved as Joint Photographic Experts Group (JPG) (dtype: uint8, pixel values stored from [0, 255]) for visualization and a normalized NumPy array 
-            (dtype: float32, pixel values stored from [0, 1]) for ML applications.
-            The clinical risk factors included were taken at baseline, and any participants with unreasonable or missing values were excluded from the analysis. </p>
-          <p></p>
-          <p>CRFs included: Age, Body Mass Index (BMI), fracture history, treatment status (taking antiresorptive drugs yes/no)</p>
-          <p>Outcomes: To mitigate the challenge of class imbalance, multiple fracture locations outside of just hip fracture were included as a positive fracture case.</p>
-
-          <p>Exact model details are currently left off of this page until thesis work is published!</p>
-
-          <p>Principal Component Analysis:</p>
-          <p>Principal Component Analysis (PCA) is an unsupervised dimensionality reduction technique in machine learning that projects high-dimensional feature spaces onto lower-dimensional 
-            principal components while retaining the majority of the predictor’s variance. </p>
-          <img src="assets/pca2.png" alt="" style="max-width:100%; height:auto;">  
-          <p>Given the limited dataset size and the 224 × 224 feature space per image, dimensionality reduction 
-            was necessary to minimize overfitting and reduce the influence of noise. As seen above, images represent
-            a lot of data that can easily cause neural networks to overfit. Five PCA-reduced datasets were generated and evaluated using logistic regression to assess the trade-off 
-            between variance retention and classification performance. The dataset with 88% image variance retained (100 principal components) yielded the highest performance 
-            (Area Under Receiver Operating Characteristic Curve (AUC) = 0.66) and was selected for subsequent neural network development. </p>
-          
-          
-          
-        </div>
-        <!-- Column 3 -->
-        <div class="modal-column">
-          <h3>Results</h3>
-          <p>y
-          </p>
-        </div>
-
-      <div class="project-highlight">
-        <strong>Final Results and Thesis Coming Soon!</strong>
       </div>
     </div>
+
 
     <!-- SureStride Project Modal -->
     <div id="surestride" class="project-modal" aria-hidden="true" role="dialog" aria-label="SureStride Details">
