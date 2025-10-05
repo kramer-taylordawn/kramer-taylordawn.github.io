@@ -376,7 +376,6 @@ section h2 {
 
 .experience-top > div:first-child {
   flex: 1;              /* left side always takes up available width */
-  min-width: 300px;     /* adjust this to match your design */
 }
 
 .position {
@@ -400,6 +399,7 @@ section h2 {
 .location,
 .date {
   font-size: 1rem;
+  white-space: nowrap;
   color: #dddddd;
 }
 
