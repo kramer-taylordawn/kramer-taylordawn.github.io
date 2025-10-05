@@ -462,3 +462,8 @@ section h2 {
   color: #4aa3ff;
   font-weight: bold;
 }
+
+.experience-card.expanded .experience-details {
+  max-height: 1000px; /* or higher if needed */
+  opacity: 1;
+}
