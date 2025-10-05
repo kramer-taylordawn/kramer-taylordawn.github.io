@@ -347,18 +347,19 @@ section h2 {
   white-space: nowrap;
 }
 
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .experience-card {
   background: #1e1e1e;
   border: 1px solid #2a2a2a;
   border-radius: 10px;
   padding: 18px;
   transition: background 0.2s ease;
+  overflow: hidden;
+  height: 140px; /* Fixed height when collapsed */
+  position: relative;
+}
+
+.experience-card.expanded {
+  height: 240px; /* Adjust to fit the bullet list */
 }
 
 .experience-top {
@@ -376,6 +377,13 @@ section h2 {
 .company {
   font-size: 0.95rem;
   color: #4aa3ff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.company-logo {
+  font-size: 1rem;
 }
 
 .location {
@@ -395,15 +403,23 @@ section h2 {
 .experience-details {
   margin-top: 12px;
   padding-left: 20px;
-  display: none;
   color: #dcdcdc;
   font-size: 0.9rem;
+  list-style-type: disc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
+/* Hover to expand */
 .experience-card:hover {
   background: #2a2a2a;
 }
 
 .experience-card:hover .experience-details {
-  display: block;
+  max-height: 200px; /* Adjust based on content */
+}
+
+.experience-card:hover {
+  height: 240px; /* Match expanded height */
 }
