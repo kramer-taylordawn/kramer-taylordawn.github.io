@@ -352,6 +352,7 @@ section h2 {
   border: 1px solid #2a2a2a;
   border-radius: 10px;
   padding: 18px;
+  margin-bottom:25px;
   cursor: pointer;
   transition: background 0.2s ease;
   overflow: hidden;
