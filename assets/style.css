@@ -376,13 +376,13 @@ section h2 {
 
 
 .position {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #ffffff;
 }
 
 .company {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #4aa3ff;
   display: flex;
   align-items: center;
@@ -448,3 +448,21 @@ section h2 {
   max-height: 500px;
   opacity: 1;
 }
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.experience-skills span {
+  background: #4aa3ff;       /* Blue theme */
+  color: #0b0b0b;            /* Dark text for contrast */
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
