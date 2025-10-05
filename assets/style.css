@@ -350,35 +350,60 @@ section h2 {
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-.experience-item {
-  border: 1px solid #ccc;
-  padding: 12px;
-  border-radius: 6px;
-  transition: background 0.2s;
-  cursor: pointer;
+.experience-card {
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 18px;
+  transition: background 0.2s ease;
 }
 
-.experience-header {
-  font-weight: bold;
+.experience-top {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.position {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.company {
+  font-size: 0.95rem;
+  color: #4aa3ff;
+}
+
+.location {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #dddddd;
+}
+
+.icon {
+  margin-right: 4px;
 }
 
 .experience-details {
-  margin-top: 8px;
+  margin-top: 12px;
   padding-left: 20px;
   display: none;
+  color: #dcdcdc;
+  font-size: 0.9rem;
 }
 
-.experience-item:hover {
-  background: #f8f8f8;
+.experience-card:hover {
+  background: #2a2a2a;
 }
 
-.experience-item:hover .experience-details {
+.experience-card:hover .experience-details {
   display: block;
 }
-
