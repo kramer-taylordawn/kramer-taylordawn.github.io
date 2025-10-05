@@ -117,13 +117,39 @@
           <p>This thesis aims to investigate if DXA images, alongside clinical risk factors, have the potential to improve fracture risk prediction.</p>
 
           <h3>Primary Research Objective</h3>
-          <p><strong>Evaluate the predictive power of DXA images and Clinical Risk Factors (CRFs) in quantifying fracture risk</strong></p>
+          <p><strong>Evaluate the predictive power of DXA images and Clinical Risk Factors (CRFs) in quantifying hip fracture risk</strong></p>
         </div>
         <!-- Column 2 -->
         <div class="modal-column">
           <h3>Methods</h3>
-          <p> 
-          </p>
+          <p>Data Organization and Image Pre-Processing</p>
+          <p>Study Data: Obtained from clinical trial data(further details released once thesis work is published to maintain anonymity).</p>
+          <p>Inclusion Criteria:</p>
+          <img src="assets/studydata.png" alt="" style="max-width:100%; height:auto;">
+          <p>Image Pre-processing:</p>
+          <p>Images were cropped from the complete DXA report using MATLAB, resized, and center cropped to have a dimension of 224 × 224 pixels. 
+            Images were converted to single-channel and filtered using a Non-Local Means filter to minimize noise while preserving sharp edges and details. 
+            Images were saved as Joint Photographic Experts Group (JPG) (dtype: uint8, pixel values stored from [0, 255]) for visualization and a normalized NumPy array 
+            (dtype: float32, pixel values stored from [0, 1]) for ML applications.
+            The clinical risk factors included were taken at baseline, and any participants with unreasonable or missing values were excluded from the analysis. </p>
+          <p></p>
+          <p>CRFs included: Age, Body Mass Index (BMI), fracture history, treatment status (taking antiresorptive drugs yes/no)</p>
+          <p>Outcomes: To mitigate the challenge of class imbalance, multiple fracture locations outside of just hip fracture were included as a positive fracture case.</p>
+
+          <p>Exact model details are currently left off of this page until thesis work is published!</p>
+
+          <p>Principal Component Analysis:</p>
+          <p>Principal Component Analysis (PCA) is an unsupervised dimensionality reduction technique in machine learning that projects high-dimensional feature spaces onto lower-dimensional 
+            principal components while retaining the majority of the predictor’s variance. </p>
+          <img src="assets/pca2.png" alt="" style="max-width:100%; height:auto;">  
+          <p>Given the limited dataset size and the 224 × 224 feature space per image, dimensionality reduction 
+            was necessary to minimize overfitting and reduce the influence of noise. As seen above, images represent
+            a lot of data that can easily cause neural networks to overfit. Five PCA-reduced datasets were generated and evaluated using logistic regression to assess the trade-off 
+            between variance retention and classification performance. The dataset with 88% image variance retained (100 principal components) yielded the highest performance 
+            (Area Under Receiver Operating Characteristic Curve (AUC) = 0.66) and was selected for subsequent neural network development. </p>
+          
+          
+          
         </div>
         <!-- Column 3 -->
         <div class="modal-column">
@@ -393,7 +419,7 @@
 <div id="signal-sparks" class="project-modal" aria-hidden="true" role="dialog" aria-label="Signal Sparks Details">
   <button class="modal-close" onclick="toggleDetail('signal-sparks')" aria-label="Close">×</button>
 
-  <h2>Signal Sparks: Biosignal Measurement Laboratories</h2>
+  <h2>Biomedical Instrumentation: Biosignal Measurement Laboratories</h2>
 
   <div class="skill-badges">
     <span>Signal Processing</span>
