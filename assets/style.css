@@ -374,6 +374,10 @@ section h2 {
   padding: 0;
 }
 
+.experience-top > div:first-child {
+  flex: 1;              /* left side always takes up available width */
+  min-width: 300px;     /* adjust this to match your design */
+}
 
 .position {
   font-size: 1.3rem;
