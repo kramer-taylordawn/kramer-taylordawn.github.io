@@ -467,3 +467,98 @@ section h2 {
   max-height: 1000px; /* or higher if needed */
   opacity: 1;
 }
+
+/* ---------------- About Me Section ---------------- */
+#about-me {
+  padding: 40px 20px;
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+#about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-intro {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Two-column layout */
+.about-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-left {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.about-left p {
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+/* Technical Skill Groups */
+.tech-skill-group {
+  margin-bottom: 20px;
+}
+
+.skill-heading {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-items span {
+  background: #4aa3ff;
+  color: #0b0b0b;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Interests Section */
+.about-interests {
+  margin-top: 40px;
+}
+
+.about-interests h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.interest-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.interest-items span {
+  background: #4aa3ff;
+  color: #0b0b0b;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
