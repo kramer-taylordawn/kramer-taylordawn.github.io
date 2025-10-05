@@ -347,6 +347,7 @@ section h2 {
   white-space: nowrap;
 }
 
+/* ---------------- Experience Card ---------------- */
 .experience-card {
   background: #1e1e1e;
   border: 1px solid #2a2a2a;
@@ -362,7 +363,7 @@ section h2 {
   background: #2a2a2a;
 }
 
-/* Flex for top row */
+/* Flex container for top row */
 .experience-top {
   display: flex;
   justify-content: space-between;
@@ -370,23 +371,29 @@ section h2 {
   gap: 12px;
 }
 
-.experience-top > div:first-child {
+/* Left column takes full width minus date */
+.experience-left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* ensures top alignment */
+  align-items: flex-start;
+  flex: 1; /* ensures left column stretches fully */
 }
 
-/* Optional: add a tiny gap between elements for consistent spacing */
-.experience-top > div:first-child > * {
+/* Small gap between elements */
+.experience-left > * {
   margin-bottom: 4px;
 }
 
-/* Ensure the date stays top-aligned */
+/* Date */
 .date {
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #dddddd;
+  flex-shrink: 0;
   align-self: flex-start;
 }
 
-
+/* Position / Company / Location */
 .position {
   font-size: 1.3rem;
   font-weight: bold;
@@ -413,23 +420,15 @@ section h2 {
   gap: 4px;
 }
 
-.date {
-  font-size: 1rem;
-  white-space: nowrap;
-  color: #dddddd;
-  flex-shrink: 0;
-}
-
 .icon {
   margin-right: 4px;
 }
 
-/* Skills badges */
+/* ---------------- Skills ---------------- */
 .experience-skills {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 6px;
 }
 
 .experience-skills span {
@@ -442,17 +441,13 @@ section h2 {
   white-space: nowrap;
 }
 
-.experience-skills-wrapper {
-  margin-top: 6px;
-}
-
-/* Hidden by default */
+/* ---------------- Experience Details / Bullets ---------------- */
 .experience-details {
   margin-top: 12px;
-  padding-left: 20px; /* bullets aligned here */
+  padding-left: 20px;
   color: #dcdcdc;
   font-size: 0.9rem;
-  list-style: none;
+  list-style: disc;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -460,26 +455,17 @@ section h2 {
 }
 
 .experience-details li {
-  position: relative; /* needed for custom bullets */
   margin-bottom: 6px;
-  padding-left: 18px; /* space for bullet */
 }
 
-/* Custom bullet */
-.experience-details li::before {
-  content: "•";
+.experience-details li::marker {
   color: #4aa3ff;
   font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.1rem;
-  line-height: 1.2;
 }
 
-/* Expanded state */
+/* ---------------- Expanded state ---------------- */
 .experience-card.expanded .experience-details {
-  max-height: 1000px; /* enough to fit content */
+  max-height: 1000px;
   opacity: 1;
 }
 
