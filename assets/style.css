@@ -347,6 +347,7 @@ section h2 {
   white-space: nowrap;
 }
 
+/* Experience Card Container */
 .experience-card {
   background: #1e1e1e;
   border: 1px solid #2a2a2a;
@@ -362,15 +363,16 @@ section h2 {
   background: #2a2a2a;
 }
 
+/* Header Layout */
 .experience-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 12px;
 }
 
-/* Normalize spacing inside experience headers */
 .experience-top > div > * {
-  margin: 0;
+  margin: 0; /* reset spacing */
   padding: 0;
 }
 
@@ -381,15 +383,11 @@ section h2 {
 }
 
 .company {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #4aa3ff;
   display: flex;
   align-items: center;
   gap: 6px;
-}
-
-.company-logo {
-  font-size: 1rem;
 }
 
 .location,
@@ -399,56 +397,7 @@ section h2 {
   color: #dddddd;
 }
 
-.icon {
-  margin-right: 4px;
-}
-
-/* Hidden by default */
-.experience-details {
-  margin-top: 12px;
-  padding-left: 0; /* No left padding */
-  color: #dcdcdc;
-  font-size: 0.9rem;
-  list-style: none; /* Remove browser bullets */
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, opacity 0.3s ease;
-}
-
-.experience-details li {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  padding-left: 0;
-  margin-bottom: 6px;
-}
-
-.experience-details li::before {
-  content: "•";
-  color: #4aa3ff;
-  font-weight: bold;
-  flex-shrink: 0;
-  margin-top: 2px; /* helps align vertically */
-}
-
-/* Custom bullet */
-.experience-details li::before {
-  content: "•";
-  color: #4aa3ff;
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-  font-size: 1.1rem;
-  line-height: 1;
-}
-
-/* When expanded */
-.experience-card.expanded .experience-details {
-  max-height: 500px;
-  opacity: 1;
-}
-
+/* Skills Row */
 .experience-skills {
   display: flex;
   flex-wrap: wrap;
@@ -457,8 +406,8 @@ section h2 {
 }
 
 .experience-skills span {
-  background: #4aa3ff;       /* Blue theme */
-  color: #0b0b0b;            /* Dark text for contrast */
+  background: #4aa3ff; /* Blue theme */
+  color: #0b0b0b;
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 0.75rem;
@@ -466,3 +415,35 @@ section h2 {
   white-space: nowrap;
 }
 
+/* Details List */
+.experience-details {
+  margin-top: 12px;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  color: #dcdcdc;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+.experience-card.expanded .experience-details {
+  max-height: 600px; /* enough space */
+  opacity: 1;
+}
+
+.experience-details li {
+  margin: 6px 0;
+  padding-left: 18px; /* consistent indent */
+  position: relative;
+}
+
+.experience-details li::before {
+  content: "•";
+  color: #4aa3ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+}
