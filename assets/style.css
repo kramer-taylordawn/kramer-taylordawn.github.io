@@ -410,9 +410,19 @@ section h2 {
 }
 
 .experience-details li {
-  position: relative;
-  padding-left: 20px; /* Space for bullet */
-  margin-bottom: 6px; /* Even spacing */
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding-left: 0;
+  margin-bottom: 6px;
+}
+
+.experience-details li::before {
+  content: "•";
+  color: #4aa3ff;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px; /* helps align vertically */
 }
 
 /* Custom bullet */
