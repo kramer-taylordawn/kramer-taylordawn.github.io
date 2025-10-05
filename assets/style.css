@@ -441,29 +441,24 @@ section h2 {
 /* Bullets / Experience Details */
 .experience-details {
   margin-top: 12px;
-  padding-left: 20px;
+  padding-left: 1.2em; /* enough space for bullets */
   color: #dcdcdc;
   font-size: 0.9rem;
-  list-style: disc;
+  list-style: disc outside; /* bullet outside the text block */
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.3s ease;
   text-align: left; /* flush left */
+  display: block; /* ensure no flex inherited */
 }
 
 .experience-details li {
   margin-bottom: 6px;
+  text-align: left; /* explicitly left-align the text */
 }
 
 .experience-details li::marker {
   color: #4aa3ff;
   font-weight: bold;
 }
-
-/* Expanded state */
-.experience-card.expanded .experience-details {
-  max-height: 1000px;
-  opacity: 1;
-}
-
