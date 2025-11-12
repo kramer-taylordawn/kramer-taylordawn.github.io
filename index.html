@@ -116,6 +116,9 @@
                 <p>To develop the remote gait lab, IMU sensors were used to calculate knee angle, walking velocity, stride length, swing time, and stance time. The prototype was integrated to a flexible knee sleeve for comofrtable patient monitoring</p>
                 <img src="assets/gaitpic.png" alt="" style="max-width:100%; height:auto;">
                 <p>Two IMU sensors were used to calculate the knee joint angle, and one additional IMU sensor was used to calculate walking speed. Data from these three sensors was used to obtain all gait parameters.</p>
+                <h3>Mechanical Casings</h3>
+                <img src="assets/sensorcase.png" alt="" style="max-width:100%; height:auto;">
+                <p>The mechanical casing was designed to house the IMU sensor so that it be easily attached to the knee sleeve. Each casing contained prongs to fit the sensor in place for additional stability, as well as a sliding lid as an extra measure to keep the sensor from moving within the case.</p>
               </div>
       
               <div class="modal-column">
@@ -126,15 +129,8 @@
                 <p>Walking speed data acquisition setup</p>
                 <h3>Experimental Circuit Design</h3>
                 <img src="assets/thighshank.png" alt="" style="max-width:100%; height:auto;">
-                <img src="assets/footcontroller.png" alt="" style="max-width:100%; height:auto;">
+                <img src="assets/Picture14.png" alt="" style="max-width:100%; height:auto;">
                 <p>Physical Test Setup</p>
-                <h3>Justification</h3>
-                <p>This closed-loop light control system uses an Elegoo UNO R3 to read a photoresistor (LDR) and adjust an LED’s 
-                  brightness via PWM. The LDR forms a voltage divider with a 10 kΩ resistor, producing a voltage proportional to ambient light, 
-                  while a 10 kΩ potentiometer sets the desired light level. The Arduino continuously calculates the error between the measured and desired 
-                  light and applies a PID controller (Kp = 1.0, Ki = 0.5, Kd = 0.05) to adjust LED brightness. The proportional term provides a direct 
-                  response, the integral term corrects steady-state error, and the derivative term dampens oscillations. Jumper wires, a breadboard, and a 
-                  220 Ω resistor for the LED allow easy, safe connections. This combination of components provides a simple, interactive demonstration of PID-controlled feedback.</p><br>
               </div>
       
               <div class="modal-column">
