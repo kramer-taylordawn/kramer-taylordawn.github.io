@@ -288,7 +288,8 @@ section h2 {
   border-left: none;
 }
 
-.modal-column h3 {
+.modal-column h3,
+.modal-content h3 {
   color: #00bfff;
   margin-top: 0;
   margin-bottom: 10px;
