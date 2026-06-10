@@ -721,3 +721,37 @@ section h2 {
   border: 3px solid #4aa3ff;
 }
 
+/* ==========================================
+   Cursor Glow Effect
+========================================== */
+
+#cursor-glow {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+  pointer-events: none;
+
+  left: 0;
+  top: 0;
+
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    circle,
+    rgba(74, 163, 255, 0.18) 0%,
+    rgba(74, 163, 255, 0.08) 40%,
+    rgba(74, 163, 255, 0.03) 60%,
+    transparent 80%
+  );
+
+  z-index: 0;
+}
+
+/* Keep all content above glow */
+nav,
+section {
+  position: relative;
+  z-index: 1;
+}
