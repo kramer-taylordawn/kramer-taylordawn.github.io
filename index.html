@@ -12,6 +12,7 @@
   <nav>
     <a href="#home" class="active">Home</a>
     <a href="#projects">Projects</a>
+    <a href="#cad">CAD & Design Engineering</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#about-me">About</a>
@@ -149,70 +150,6 @@
             <div class="project-highlight">
               <h3>Remote Gait Lab - Live Demonstration</h3>
               <a href="https://www.youtube.com/watch?v=SUwyz-0deLU" target="_blank" class="btn">Click to View!</a>
-            </div>
-    </div>
-
-    <!-- UNO Project Modal -->
-    <div id="uno-project" class="project-modal" aria-hidden="true" role="dialog" aria-label="UNO Project Details">
-      <button class="modal-close" onclick="toggleDetail('uno-project')" aria-label="Close">×</button>
-    
-      <h2>Closed-Loop Controller Using Elegoo UNO R3</h2>
-    
-      <div class="skill-badges">
-        <span>Arduino</span><span>Control Systems</span><span>PID</span><span>Embedded Programming</span><span>Firmware</span><span>Debugging</span><span>Breadboarding</span><span>Electrical Circuits and Power</span>
-      </div>
-    
-      <div class="modal-grid">
-              <div class="modal-column">
-                <h3>Project Purpose</h3>
-                <p>This was a self directed project to further the understanding of closed loop control systems and embedded programming using an Arduino interface. </p>
-                <h3>Project Objective</h3>
-                <p>The objective of this project was to create a closed-loop controller to maintain a user-selected light level in an LED using an LDR sensor. Proportional (P), Proportional-Integral (PI), and Proportional Integral Derivative (PID) controllers were evaluated in a step-response experiment.</p>
-                <h3>Parts List</h3>
-                <p>• Elegoo UNO R3 (Arduino Uno compatible) + USB cable</p><br>
-                <p>• Breadboard</p><br>
-                <p>• Photoresistor (LDR)</p><br>
-                <p>• 10 kΩ resistor (for LDR divider)</p><br>
-                <p>• 10 kΩ potentiometer (for setpoint)</p><br>
-                <p>• LED</p><br>
-                <p>• 220 Ω resistor (for LED)</p><br>
-                <p>• Jumper wires (male-to-male)</p><br>
-              </div>
-      
-              <div class="modal-column">
-                <h3>Electrical Circuit Design</h3>
-                <img src="assets/Smashing Albar.png" alt="" style="max-width:100%; height:auto;">
-                <h3>Experimental Circuit Design</h3>
-                <img src="assets/IMG_6084.jpg" alt="" style="max-width:100%; height:auto;">
-                <p>Physical Test Setup</p>
-                <h3>Justification</h3>
-                <p>This closed-loop light control system uses an Elegoo UNO R3 to read a photoresistor (LDR) and adjust an LED’s 
-                  brightness via PWM. The LDR forms a voltage divider with a 10 kΩ resistor, producing a voltage proportional to ambient light, 
-                  while a 10 kΩ potentiometer sets the desired light level. The Arduino continuously calculates the error between the measured and desired 
-                  light and applies a PID controller (Kp = 1.0, Ki = 0.5, Kd = 0.05) to adjust LED brightness. The proportional term provides a direct 
-                  response, the integral term corrects steady-state error, and the derivative term dampens oscillations. Jumper wires, a breadboard, and a 
-                  220 Ω resistor for the LED allow easy, safe connections. This combination of components provides a simple, interactive demonstration of PID-controlled feedback.</p><br>
-              </div>
-      
-              <div class="modal-column">
-                <h3>Results</h3>
-                <img src="assets/Image-1.jpg" alt="" style="max-width:100%; height:auto;">
-                <p>The PID controller with Kp = 1.0, Ki = 0.5, and Kd = 0.05 worked well because the proportional term provided a strong immediate response to light 
-                  deviations, the integral term corrected steady-state error, and the small derivative term dampened oscillations, resulting in smooth, stable control. 
-                  PID is the best choice for this system because it can handle both steady-state errors and dynamic changes in light, unlike simple on/off or proportional-only control. 
-                  The potentiometer allows easy adjustment of the setpoint, letting the system respond to different ambient light conditions, which could be applied in a real-world scenario, 
-                  such as an automatic night light that maintains a desired brightness level depending on the surrounding light.</p>
-                <h3>Conclusion</h3>
-                <p>This project was an excellent hands-on practice with embedded systems, Arduino programming, and closed-loop control. It demonstrated how sensors, actuators, 
-                  and PID algorithms can work together to automatically maintain a desired condition, providing practical experience in designing, tuning, and testing a real-time 
-                  feedback system. By adjusting the potentiometer and observing the LED response, we gained a clear understanding of system dynamics, PID behavior, and the fundamentals 
-                  of control engineering in a simple, interactive setup.</p>
-              </div>
-            </div>
-      
-            <div class="project-highlight">
-              <h3>Closed Loop Control</h3>
-              <a href="https://youtube.com/shorts/DC7TTEfJy6w?feature=share" target="_blank" class="btn">Click to View!</a>
             </div>
     </div>
     
@@ -513,116 +450,118 @@
         📄 Click here to view our final report!
       </a>
     </div>
-
-    <!-- Signal Sparks modal -->
-<div id="signal-sparks" class="project-modal" aria-hidden="true" role="dialog" aria-label="Signal Sparks Details">
-  <button class="modal-close" onclick="toggleDetail('signal-sparks')" aria-label="Close">×</button>
-
-  <h2>Biomedical Instrumentation: Biosignal Measurement Laboratories</h2>
-
-  <div class="skill-badges">
-    <span>Signal Processing</span>
-    <span>MATLAB</span>
-    <span>Oscilloscope</span>
-    <span>Real-Time Data Acquisition</span>
-    <span>Filtering Raw Data</span>
-  </div>
-
-  <div class="modal-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 150px;">
-    <!-- Column 1: EMG -->
-    <div class="modal-column">
-      <h2>EMG Data Acquisition</h2>
-      <h3>Investigating EMG Signal</h3>
-      <p>The purpose of this exercise was to collect EMG data using a printed circuit board and EMG electrodes and to examine how the EMG signal differs between slow isometric, slow dynamic, and rapid dynamic contractions.</p>
-      <p>During isometric contractions, the muscle generates force without changing length. During dynamic contractions, the muscle changes length.</p>
-
-      <img src="assets/emg1.png" alt="" style="max-width:100%; height:auto;">
-      <p>Time domain plot for slow isometric contraction</p>
-
-      <img src="assets/emg2.png" alt="" style="max-width:100%; height:auto;">
-      <p>Time domain plot for slow dynamic contraction, with 2Hz low-pass filter from PCB</p>
-
-      <img src="assets/emg3.png" alt="" style="max-width:100%; height:auto;">
-      <p>Time domain plot for rapid dynamic contraction, with 2Hz low-pass filter and 10Hz low-pass filter</p>
-
-      <p>Envelope plots were created to visualize the overall muscle activation patterns. These plots are useful for dynamic contractions because muscle activity changes over time, while isometric contractions are relatively steady, so smoothing adds little information.</p>
-
-      <img src="assets/emg4.png" alt="" style="max-width:100%; height:auto;">
-      <p>Time domain (envelope) plot for slow dynamic contraction, with 2Hz low-pass filter from PCB</p>
-
-      <img src="assets/emg5.png" alt="" style="max-width:100%; height:auto;">
-      <p>Time domain (envelope) plot for rapid dynamic contraction, with 2Hz low-pass filter and 10Hz low-pass filter</p>
-
-      <p>The EMG signal was transformed to the frequency domain to observe how motor units are recruited. Amplitude and phase plots were calculated, but only phase plots are shown.</p>
-
-      <img src="assets/emg7.png" alt="" style="max-width:100%; height:auto;">
-      <p>Frequency amplitude plot for slow isometric contraction</p>
-
-      <img src="assets/emg8.png" alt="" style="max-width:100%; height:auto;">
-      <p>Frequency amplitude plot for slow dynamic contraction, with 2Hz low-pass filter from PCB</p>
-
-      <img src="assets/emg9.png" alt="" style="max-width:100%; height:auto;">
-      <p>Frequency amplitude plot for rapid dynamic contraction, with 2Hz low-pass filter and 10Hz low-pass filter</p>
-
-      <p>It was expected that the slow isometric contraction plot would have values concentrated in low frequency with little change and smaller amplitudes, which was observed.</p>
-      <p>It was expected that the slow dynamic contraction plot would have most EMG power in low frequencies, as motor units are recruited gradually and firing rates are relatively slow. This was also observed.</p>
-      <p>Finally, it was expected that the rapid dynamic contraction plot would have higher frequencies that follow the rapid recruitment of additional motor units and increased firing rates, which was also seen.</p>
-
-      <img src="assets/emg6.png" alt="" style="max-width:100%; height:auto;">
-      <p>EMG signal amplitude increased with weight, which was expected as more motor units would be recruited to support a larger force.</p>
-    </div>
-
-    <!-- Column 2: ECG -->
-    <div class="modal-column">
-      <h2>ECG Data Acquisition</h2>
-      <h3>Investigating ECG Signal</h3>
-      <p>The purpose of this exercise was to acquire ECG data using a printed circuit board, an oscilloscope, and a 3-Lead ECG and observe how the waveform changes under various conditions.</p>
-      <p>The first exercise was to observe how the waveform changed on the oscilloscope for patients with three different normal sinus rhythms (80, 100, and 120 BPM)</p>
-
-      <img src="assets/ecg1.png" alt="" style="max-width:100%; height:auto;">
-      <p>Normal sinus rhythm ECG patient with a frequency of 80 BPM</p>
-
-      <img src="assets/ecg 2.png" alt="" style="max-width:100%; height:auto;">
-      <p>Normal sinus rhythm ECG patient with a frequency of 100 BPM</p>
-
-      <img src="assets/ecg 3.png" alt="" style="max-width:100%; height:auto;">
-      <p>Normal sinus rhythm ECG patient with a frequency of 120 BPM</p>
-
-      <p>ECG rhythm was also explored using a human participant with Lead I, Lead II, and Lead III configurations</p>
-
-      <img src="assets/ecg4.png" alt="" style="max-width:100%; height:auto;">
-      <p>Lead I Configuration</p>
-
-      <img src="assets/ecg5.png" alt="" style="max-width:100%; height:auto;">
-      <p>Lead II Configuration</p>
-
-      <img src="assets/ecg6.png" alt="" style="max-width:100%; height:auto;">
-      <p>Lead III Configuration</p>
-
-      <p>Lead I, II, and III ECGs look different because each lead measures the heart’s electrical activity from a different angle across the frontal plane, capturing distinct voltage patterns depending on the orientation of the depolarization wave relative to the lead.</p>
-      <p>Lead II is the most popular for routine ECG monitoring because its axis aligns closely with the heart’s normal depolarization direction, from the right atrium to the left ventricle, producing the largest and clearest P waves and QRS complexes, which makes it easiest to detect arrhythmias and analyze heart rhythm.</p>
-
-      <p>One ECG signal trial was processed in MATLAB to practice using a bandpass filter to remove 60Hz electrical interference noise.</p>
-      <img src="assets/ecg7.png" alt="" style="max-width:100%; height:auto;">
-      <p>Demonstration of removal of 60Hz powerline interference using bandpass filter</p>
-    </div>
-  </div> <!-- End modal-grid -->
-
-  <!-- Full-width final result -->
-  <div class="project-highlight">
-    <h3>Final Result</h3>
-    <p>
-      In conclusion, the EMG activity behaved as expected, and this was a good exercise in understanding how EMG reflects different contraction types. The envelope plots clearly showed the timing and intensity of activation during slow dynamic movements, while the frequency analysis highlighted that slow contractions predominantly involve low-frequency motor unit activity.
-      The ECG plots behaved as expected, and it was very interesting to learn to use the different equipment in the laboratory!
-    </p>
-
-    <h3>Personal Contributions</h3>
-    <p>
-      During this project, I contributed to data collection, signal processing, and MATLAB analysis for EMG and ECG signals.
-    </p>
-  </div>
-</div>
   </section>
+
+
+
+
+  
+<section id="cad" class="section">
+
+    <div class="section-header">
+        <h2>CAD & Design Engineering</h2>
+        <p>
+            Examples of mechanical design work completed in SolidWorks,
+            demonstrating assemblies, mechanisms, design for manufacturing,
+            engineering drawings, and finite element analysis.
+        </p>
+    </div>
+
+    <div class="cad-grid">
+
+        <!-- Assemblies -->
+        <div class="cad-card">
+            <h3>Assemblies & Mechanisms</h3>
+            <p>
+                Mechanical assemblies, motion studies, exploded views,
+                mating strategies, and mechanism design.
+            </p>
+
+            <div class="cad-gallery">
+                <img src="images/assembly1.jpg" alt="Assembly 1">
+                <img src="images/assembly2.jpg" alt="Assembly 2">
+                <img src="images/assembly3.jpg" alt="Assembly 3">
+            </div>
+        </div>
+
+        <!-- Complex Parts -->
+        <div class="cad-card">
+            <h3>Complex Parts & Surfacing</h3>
+            <p>
+                Advanced modeling using lofts, sweeps, surface bodies,
+                and complex geometries.
+            </p>
+
+            <div class="cad-gallery">
+                <img src="images/surface1.jpg" alt="Surface Design">
+                <img src="images/surface2.jpg" alt="Complex Geometry">
+                <img src="images/surface3.jpg" alt="Surface Modeling">
+            </div>
+        </div>
+
+        <!-- DFM -->
+        <div class="cad-card">
+            <h3>Design for Manufacturing</h3>
+            <p>
+                Injection molding considerations, CNC-friendly features,
+                draft analysis, and production-oriented design decisions.
+            </p>
+
+            <div class="cad-gallery">
+                <img src="images/dfm1.jpg" alt="DFM Example">
+                <img src="images/dfm2.jpg" alt="Manufacturing Design">
+                <img src="images/dfm3.jpg" alt="Draft Analysis">
+            </div>
+        </div>
+
+        <!-- Sheet Metal -->
+        <div class="cad-card">
+            <h3>Sheet Metal & Frames</h3>
+            <p>
+                Sheet metal components, weldments, structural frames,
+                bend design, and fabrication-ready models.
+            </p>
+
+            <div class="cad-gallery">
+                <img src="images/sheet1.jpg" alt="Sheet Metal">
+                <img src="images/sheet2.jpg" alt="Frame Design">
+                <img src="images/sheet3.jpg" alt="Weldment">
+            </div>
+        </div>
+
+        <!-- Drawings -->
+        <div class="cad-card">
+            <h3>Engineering Drawings</h3>
+            <p>
+                Manufacturing drawings, tolerancing, section views,
+                detail views, and technical documentation.
+            </p>
+
+            <div class="cad-gallery">
+                <img src="images/drawing1.jpg" alt="Drawing">
+                <img src="images/drawing2.jpg" alt="Drawing">
+                <img src="images/drawing3.jpg" alt="Drawing">
+            </div>
+        </div>
+
+        <!-- FEA -->
+        <div class="cad-card">
+            <h3>Finite Element Analysis</h3>
+            <p>
+                Stress, displacement, and structural simulations used
+                to evaluate and improve design performance.
+            </p>
+
+            <div class="cad-gallery">
+                <img src="images/fea1.jpg" alt="FEA">
+                <img src="images/fea2.jpg" alt="FEA">
+                <img src="images/fea3.jpg" alt="FEA">
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
 <!-- Experience Section -->
   <section id="experience">
