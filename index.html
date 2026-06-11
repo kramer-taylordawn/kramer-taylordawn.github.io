@@ -461,7 +461,7 @@
       <p>Mechanical assemblies, motion studies, exploded views, mating strategies, and mechanism design.</p>
 
       <div class="cad-gallery">
-        <img src="assets/Screenshot 2026-06-10 200902.png" alt="Assembly 1">
+        <img src="assets/Screenshot 2026-06-10 200902.png" alt="Assembly 1" onclick="openImg(this)>
         <img src="assets/Screenshot 2026-06-09 230914.png" alt="Assembly 2">
         <img src="assets/Screenshot 2026-06-09 230920.png" alt="Assembly 3">
         <img src="assets/Screenshot 2026-06-09 230932.png" alt="Assembly 4">
@@ -919,6 +919,18 @@
     });
   });
 
+  function openImg(img) {
+    const modal = document.getElementById("img-modal");
+    const modalImg = document.getElementById("img-modal-content");
+  
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+  }
+  
+  function closeImgModal() {
+    document.getElementById("img-modal").style.display = "none";
+  }
+
   // Highlight active nav link on scroll
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('nav a');
@@ -947,6 +959,11 @@
     <img id="lightbox-img" src="" alt="Expanded CAD view">
   </div>
 
+  <!-- Fullscreen image viewer -->
+  <div id="img-modal" class="img-modal" onclick="closeImgModal()">
+    <img id="img-modal-content" class="img-modal-content" alt="">
+  </div>
+  
   // Cursor glow effect
   const glow = document.getElementById("cursor-glow");
 
