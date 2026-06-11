@@ -1784,15 +1784,6 @@ section,
   overflow-y: auto;
 }
 
-/* Optional dark backdrop to stop “text bleed through” */
-body.modal-open::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 99998;
-}
-
 /* Prevent page scroll when modal open */
 body.modal-open {
   overflow: hidden;
