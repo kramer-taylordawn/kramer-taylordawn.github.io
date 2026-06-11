@@ -1720,3 +1720,80 @@ animateGlow();
 body.modal-open {
   overflow: hidden;
 }
+
+
+      /* =========================
+   FIX: stacking order system
+========================= */
+
+/* Cursor glow MUST be behind everything */
+#cursor-glow {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(74, 163, 255, 0.18) 0%,
+    rgba(74, 163, 255, 0.08) 40%,
+    rgba(74, 163, 255, 0.03) 60%,
+    transparent 80%
+  );
+
+  z-index: 0; /* KEEP LOW */
+}
+
+/* Everything on page content ABOVE glow */
+nav,
+section,
+.home-content,
+.projects-grid,
+.experience-card,
+.about-columns {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   FIX: MODAL (highest layer)
+========================= */
+
+.project-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  height: 80%;
+
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 120, 255, 0.6);
+
+  z-index: 99999; /* IMPORTANT: always above everything */
+
+  padding: 20px;
+  color: #e0e0e0;
+
+  overflow-y: auto;
+}
+
+/* Optional dark backdrop to stop “text bleed through” */
+body.modal-open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 99998;
+}
+
+/* Prevent page scroll when modal open */
+body.modal-open {
+  overflow: hidden;
+}
