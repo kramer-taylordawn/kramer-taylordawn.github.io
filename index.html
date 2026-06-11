@@ -870,158 +870,112 @@
 
 <!-- JavaScript (single consolidated script) -->
 <script>
-  // Toggle modal open/close by id
-  function toggleDetail(id) {
-    const modal = document.getElementById(id);
-    if (!modal) return;
-  
-    const isOpen = modal.style.display === 'block';
-  
-    // close all modals
-    document.querySelectorAll('.project-modal').forEach(m => {
-      m.style.display = 'none';
-      m.setAttribute('aria-hidden', 'true');
-    });
-  
-    // toggle selected modal
-    if (!isOpen) {
-      modal.style.display = 'block';
-      modal.setAttribute('aria-hidden', 'false');
-  
-      setTimeout(() => {
-        modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 50);
+// Toggle modal open/close by id
+function toggleDetail(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+
+  const isOpen = modal.style.display === 'block';
+
+  // close all modals
+  document.querySelectorAll('.project-modal').forEach(m => {
+    m.style.display = 'none';
+    m.setAttribute('aria-hidden', 'true');
+  });
+
+  // open clicked modal
+  if (!isOpen) {
+    modal.style.display = 'block';
+    modal.setAttribute('aria-hidden', 'false');
+
+    setTimeout(() => {
+      modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 50);
+  }
+}
+
+// Click outside to close modal
+window.addEventListener('click', function (e) {
+  document.querySelectorAll('.project-modal').forEach(modal => {
+    if (
+      modal.style.display === 'block' &&
+      !modal.contains(e.target) &&
+      !e.target.classList.contains('view-project')
+    ) {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
     }
-  }
-
-  // Click outside modal to close
-  window.addEventListener('click', function (e) {
-    document.querySelectorAll('.project-modal').forEach(modal => {
-      if (
-        modal.style.display === 'block' &&
-        !modal.contains(e.target) &&
-        !e.target.classList.contains('view-project')
-      ) {
-        modal.style.display = 'none';
-        modal.setAttribute('aria-hidden', 'true');
-      }
-    });
   });
+});
 
-  // Smooth nav scrolling
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
+// Nav smooth scroll
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
+});
 
-  function openImg(img) {
-    const modal = document.getElementById("img-modal");
-    const modalImg = document.getElementById("img-modal-content");
-  
-    modal.style.display = "flex";
-    modalImg.src = img.src;
-  }
-  
-  function closeImgModal() {
-    document.getElementById("img-modal").style.display = "none";
-  }
+// Highlight nav on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
 
-  // Highlight active nav link on scroll
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  });
-
-  <!-- Lightbox (full screen image viewer) -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close" onclick="closeLightbox(event)">×</span>
-    <img id="lightbox-img" src="" alt="Expanded CAD view">
-  </div>
-
-  <!-- Fullscreen image viewer -->
-  <div id="img-modal" class="img-modal" onclick="closeImgModal()">
-    <img id="img-modal-content" class="img-modal-content" alt="">
-  </div>
-  
-  // Cursor glow effect
-  const glow = document.getElementById("cursor-glow");
-
-  let mouseX = 0;
-  let mouseY = 0;
-  let currentX = 0;
-  let currentY = 0;
-
-  document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animateGlow() {
-    currentX += (mouseX - currentX) * 0.12;
-    currentY += (mouseY - currentY) * 0.12;
-
-    if (glow) {
-      glow.style.left = currentX + "px";
-      glow.style.top = currentY + "px";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
     }
+  });
 
-    requestAnimationFrame(animateGlow);
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Image modal
+function openImg(img) {
+  const modal = document.getElementById("img-modal");
+  const modalImg = document.getElementById("img-modal-content");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeImgModal() {
+  document.getElementById("img-modal").style.display = "none";
+}
+
+// Cursor glow
+const glow = document.getElementById("cursor-glow");
+
+let mouseX = 0;
+let mouseY = 0;
+let currentX = 0;
+let currentY = 0;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateGlow() {
+  currentX += (mouseX - currentX) * 0.12;
+  currentY += (mouseY - currentY) * 0.12;
+
+  if (glow) {
+    glow.style.left = currentX + "px";
+    glow.style.top = currentY + "px";
   }
 
-  animateGlow();
+  requestAnimationFrame(animateGlow);
+}
 
-  /* =========================
-   LIGHTBOX (FULL SCREEN VIEW)
-========================= */
-  
-  .lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.92);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
-  }
-  
-  .lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-  }
+animateGlow();
 </script>
