@@ -1783,8 +1783,3 @@ section,
 
   overflow-y: auto;
 }
-
-/* Prevent page scroll when modal open */
-body.modal-open {
-  overflow: hidden;
-}
