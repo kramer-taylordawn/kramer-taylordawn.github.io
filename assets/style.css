@@ -1806,44 +1806,51 @@ section,
   gap: 12px;
 }
 
-/* =========================
-   IMAGE GALLERY GRID
-========================= */
+/* ===== CAD GRID WRAPPER ===== */
+.cad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
 
+/* ===== EACH CAD CARD ===== */
+.cad-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* ===== GALLERY (THIS IS THE IMPORTANT PART) ===== */
 .cad-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 10px;
+    column-count: 3;          /* number of columns on desktop */
+    column-gap: 15px;
+    margin-top: 15px;
 }
 
-/* Images */
+/* make images behave like masonry items */
 .cad-gallery img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  transition: transform 0.25s ease;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: block;
+    break-inside: avoid;
+    transition: transform 0.2s ease;
 }
 
-/* Hover effect */
 .cad-gallery img:hover {
-  transform: scale(1.03);
+    transform: scale(1.02);
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-
-@media (max-width: 900px) {
-  .cad-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 1000px) {
+    .cad-gallery {
+        column-count: 2;
+    }
 }
 
 @media (max-width: 600px) {
-  .cad-gallery {
-    grid-template-columns: 1fr;
-  }
+    .cad-gallery {
+        column-count: 1;
+    }
 }
