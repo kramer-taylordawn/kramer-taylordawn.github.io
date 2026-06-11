@@ -222,7 +222,7 @@ section h2 {
 .project-modal {
   display: none; /* hidden by default */
   position: fixed; /* overlay on top of everything */
-  z-index: 9999;
+  z-index: 10000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1717,3 +1717,6 @@ animateGlow();
 </body>
 </html>
 
+body.modal-open {
+  overflow: hidden;
+}
