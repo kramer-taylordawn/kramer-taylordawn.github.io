@@ -1823,23 +1823,22 @@ section,
 
 /* ===== GALLERY (THIS IS THE IMPORTANT PART) ===== */
 .cad-gallery {
-    column-count: 3;          /* number of columns on desktop */
-    column-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
     margin-top: 15px;
 }
 
-/* make images behave like masonry items */
 .cad-gallery img {
     width: 100%;
-    margin-bottom: 15px;
-    border-radius: 8px;
+    height: auto;
+    border-radius: 10px;
     display: block;
-    break-inside: avoid;
     transition: transform 0.2s ease;
 }
 
 .cad-gallery img:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 /* ===== RESPONSIVE BREAKPOINTS ===== */
