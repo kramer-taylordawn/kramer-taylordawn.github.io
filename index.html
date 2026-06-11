@@ -900,23 +900,29 @@
   function toggleDetail(id) {
     const modal = document.getElementById(id);
     if (!modal) return;
-
+  
     const isOpen = modal.style.display === 'block';
-
+  
     // close all modals
     document.querySelectorAll('.project-modal').forEach(m => {
       m.style.display = 'none';
       m.setAttribute('aria-hidden', 'true');
     });
-
-    // open clicked modal
+  
+    // remove scroll lock
+    document.body.classList.remove('modal-open');
+  
+    // open if not already open
     if (!isOpen) {
       modal.style.display = 'block';
       modal.setAttribute('aria-hidden', 'false');
-
+  
+      // lock background scroll
+      document.body.classList.add('modal-open');
+  
       setTimeout(() => {
         modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 60);
+      }, 50);
     }
   }
 
