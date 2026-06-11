@@ -941,6 +941,12 @@
     });
   });
 
+  <!-- Lightbox (full screen image viewer) -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox(event)">×</span>
+    <img id="lightbox-img" src="" alt="Expanded CAD view">
+  </div>
+
   // Cursor glow effect
   const glow = document.getElementById("cursor-glow");
 
