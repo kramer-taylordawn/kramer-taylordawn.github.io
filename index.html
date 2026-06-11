@@ -450,9 +450,11 @@
     <div class="section-header">
         <h2>CAD & Design Engineering</h2>
         <p>
-            Examples of mechanical design work completed in SolidWorks,
-            demonstrating assemblies, mechanisms, design for manufacturing,
-            engineering drawings, and finite element analysis.
+            Examples of mechanical design work completed in SolidWorks, Autodesk Inventor, and Fusion.
+        </p>
+        <p>
+            Demonstrates assemblies, mechanisms, DFM,
+            engineering drawings, and low-level finite element analysis.
         </p>
     </div>
 
@@ -909,16 +911,10 @@
       m.setAttribute('aria-hidden', 'true');
     });
   
-    // remove scroll lock
-    document.body.classList.remove('modal-open');
-  
-    // open if not already open
+    // toggle selected modal
     if (!isOpen) {
       modal.style.display = 'block';
       modal.setAttribute('aria-hidden', 'false');
-  
-      // lock background scroll
-      document.body.classList.add('modal-open');
   
       setTimeout(() => {
         modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
