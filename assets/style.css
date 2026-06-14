@@ -3,6 +3,11 @@
   overflow: visible; /* ensures glow isn't being cropped */
 }
 
+section {
+  position: static !important;
+  z-index: auto !important;
+  transform: none !important;
+}
 
 /* Global Styles */
 body {
@@ -239,10 +244,10 @@ section h2 {
   height: 100vh;
   display: none;
 
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 0, 0, 0.6) !important;
   overflow-y: auto;
 
-  z-index: 9999999;
+  z-index: 2147483647;
 }
 
 .projects-intro {
