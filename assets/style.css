@@ -243,8 +243,9 @@ section h2 {
   height: 80%;      /* almost full height */
   background-color: #1c1c1c;
   border-radius: 12px;
+  overflow-y: auto;     /* ONLY modal scrolls */
   box-shadow: 0 0 20px rgba(0, 120, 255, 0.5);
-  z-index: 2000;
+  z-index: 99999999;
   padding: 20px;
   color: #e0e0e0;
   overflow-y: auto; /* scroll if content is taller */
