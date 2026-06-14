@@ -1940,20 +1940,20 @@ section,
   padding-top: 15px;
 }
 
-/* IMAGE GRID (2 per row) */
+/* IMAGE GRID (3 per row) */
 .cad-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
 }
 
 /* IMAGE SIZING (fix huge images) */
 .cad-grid img {
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 200px;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 4px;
   background: #0f0f0f;
 }
 
