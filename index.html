@@ -1150,19 +1150,24 @@ animateGlow();
 
 /* ===== FIX MODAL ALWAYS ON TOP ===== */
 
+</script>
+
+<style>
+/* ===== FIX MODAL ALWAYS ON TOP ===== */
+
 .project-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9999999; /* higher than everything */
-  background: rgba(0, 0, 0, 0.8); /* IMPORTANT: blocks page behind */
-  overflow-y: auto; /* allows modal scrolling only */
-  display: none; /* default hidden */
+  z-index: 9999999;
+  background: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  display: none;
 }
 
-/* inner modal box */
+/* inner modal content layering */
 .project-modal .modal-content,
 .project-modal .modal-grid,
 .project-modal h2,
@@ -1170,3 +1175,4 @@ animateGlow();
   position: relative;
   z-index: 2;
 }
+</style>
