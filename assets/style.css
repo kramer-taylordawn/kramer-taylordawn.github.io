@@ -244,7 +244,7 @@ section h2 {
   height: 100vh;
   display: none;
 
-  background: rgba(255, 0, 0, 0.6) !important;
+  background: #000;
   overflow-y: auto;
 
   z-index: 2147483647;
