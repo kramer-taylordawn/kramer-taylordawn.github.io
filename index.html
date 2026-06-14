@@ -89,103 +89,107 @@
 
     <!-- Gait Project Modal -->
     <div id="gait-project" class="project-modal" aria-hidden="true" role="dialog" aria-label="Gait Guide Project Details">
-      <button class="modal-close" onclick="toggleDetail('gait-project')" aria-label="Close">×</button>
-    
-      <h2>Gait-Guide: Remote Gait Lab Project</h2>
-    
-      <div class="skill-badges">
-        <span>Mechanical Design</span><span>3D Printing</span><span>Prototyping</span><span>Real-Time Data Acquisition</span><span>Autodesk Inventor</span><span>Python</span><span>Microcontrollers and IMU Sensors</span>
+      <div class="modal-content-wrapper">
+        <button class="modal-close" onclick="toggleDetail('gait-project')" aria-label="Close">×</button>
+      
+        <h2>Gait-Guide: Remote Gait Lab Project</h2>
+      
+        <div class="skill-badges">
+          <span>Mechanical Design</span><span>3D Printing</span><span>Prototyping</span><span>Real-Time Data Acquisition</span><span>Autodesk Inventor</span><span>Python</span><span>Microcontrollers and IMU Sensors</span>
+        </div>
+      
+        <div class="modal-grid">
+                <div class="modal-column">
+                  <h3>Project Purpose</h3>
+                  <p>After receiving a total knee replacement, it’s extremely critical that patients begin walking 2-3 days after the operation to ensure a proper recovery. It can be challenging for physicians to monitor the healing process of each patient and obtain critical gait parameters based solely on visual inspection of their gait during sessions with a physiotherapist. </p>
+                  <h3>Project Objective</h3>
+                  <p>The objective of this project was to design a solution to remotely monitor the range of motion of the knee joint during walking for a patient after total knee replacement surgery.</p>
+                  <h3>Prototype Design</h3>
+                  <p>To develop the remote gait lab, IMU sensors were used to calculate knee angle, walking velocity, stride length, swing time, and stance time. The prototype was integrated to a flexible knee sleeve for comofrtable patient monitoring</p>
+                  <img src="assets/gaitpic.png" alt="" style="max-width:100%; height:auto;">
+                  <p>Two IMU sensors were used to calculate the knee joint angle, and one additional IMU sensor was used to calculate walking speed. Data from these three sensors was used to obtain all gait parameters.</p>
+                  <h3>Mechanical Casings</h3>
+                  <img src="assets/sensorcase.png" alt="" style="max-width:100%; height:auto;">
+                  <p>The mechanical casing was designed to house the IMU sensor so that it be easily attached to the knee sleeve. Each casing contained prongs to fit the sensor in place for additional stability, as well as a sliding lid as an extra measure to keep the sensor from moving within the case.</p>
+                </div>
+        
+                <div class="modal-column">
+                  <h3>Electrical Circuit Design</h3>
+                  <img src="assets/footboard.png" alt="" style="max-width:100%; height:auto;">
+                  <p>Knee joint angle data acquisition setup</p>
+                  <img src="assets/actualfootboard.png" alt="" style="max-width:100%; height:auto;">
+                  <p>Walking speed data acquisition setup</p>
+                  <h3>Experimental Circuit Design</h3>
+                  <img src="assets/thighshank.png" alt="" style="max-width:100%; height:auto;">
+                  <img src="assets/Picture14.png" alt="" style="max-width:100%; height:auto;">
+                  <p>Physical Test Setup</p>
+                </div>
+        
+                <div class="modal-column">
+                  <h3>Results</h3>
+                  <img src="assets/mechphoto.png" alt="" style="max-width:100%; height:auto;">
+                  <p>The instrumented sleeve was designed to house the three sensors, the microcontroller and a power source so that real-time wireless data acquisition could be performed. This allowed the participant to walk normally, making the results 
+                  more representative of their true gait pattern.</p>
+                  <img src="assets/lastresult.png" alt="" style="max-width:100%; height:auto;">
+                  <p>The data acquisition system was integrated with a graphical user interface (GUI) for real-time monitoring. As the participant walked, the knee angle would automatically update on the plot. The GUI also 
+                  enabled the operator to view previous data and compare participant data to a healthy reference population to help identify any abnormalities.</p>
+                  <img src="assets/gaitresult.png" alt="" style="max-width:100%; height:auto;">
+                  <h3>Conclusion</h3>
+                  <p>The Gait Guide offered an efficient, wearable solution for remotely monitoring knee recovery after total knee replacement. Using an Arduino-based system, it collected and analyzed gait data, and compared it to healthy benchmarks. This solution has the potential to enable clinicians to track progress more accurately and allow patients to practice exercises confidently at home, support data-driven rehabilitation.</p>
+                </div>
+              </div>
+        
+              <div class="project-highlight">
+                <h3>Remote Gait Lab - Live Demonstration</h3>
+                <a href="https://www.youtube.com/watch?v=SUwyz-0deLU" target="_blank" class="btn">Click to View!</a>
+              </div>
       </div>
-    
-      <div class="modal-grid">
-              <div class="modal-column">
-                <h3>Project Purpose</h3>
-                <p>After receiving a total knee replacement, it’s extremely critical that patients begin walking 2-3 days after the operation to ensure a proper recovery. It can be challenging for physicians to monitor the healing process of each patient and obtain critical gait parameters based solely on visual inspection of their gait during sessions with a physiotherapist. </p>
-                <h3>Project Objective</h3>
-                <p>The objective of this project was to design a solution to remotely monitor the range of motion of the knee joint during walking for a patient after total knee replacement surgery.</p>
-                <h3>Prototype Design</h3>
-                <p>To develop the remote gait lab, IMU sensors were used to calculate knee angle, walking velocity, stride length, swing time, and stance time. The prototype was integrated to a flexible knee sleeve for comofrtable patient monitoring</p>
-                <img src="assets/gaitpic.png" alt="" style="max-width:100%; height:auto;">
-                <p>Two IMU sensors were used to calculate the knee joint angle, and one additional IMU sensor was used to calculate walking speed. Data from these three sensors was used to obtain all gait parameters.</p>
-                <h3>Mechanical Casings</h3>
-                <img src="assets/sensorcase.png" alt="" style="max-width:100%; height:auto;">
-                <p>The mechanical casing was designed to house the IMU sensor so that it be easily attached to the knee sleeve. Each casing contained prongs to fit the sensor in place for additional stability, as well as a sliding lid as an extra measure to keep the sensor from moving within the case.</p>
-              </div>
-      
-              <div class="modal-column">
-                <h3>Electrical Circuit Design</h3>
-                <img src="assets/footboard.png" alt="" style="max-width:100%; height:auto;">
-                <p>Knee joint angle data acquisition setup</p>
-                <img src="assets/actualfootboard.png" alt="" style="max-width:100%; height:auto;">
-                <p>Walking speed data acquisition setup</p>
-                <h3>Experimental Circuit Design</h3>
-                <img src="assets/thighshank.png" alt="" style="max-width:100%; height:auto;">
-                <img src="assets/Picture14.png" alt="" style="max-width:100%; height:auto;">
-                <p>Physical Test Setup</p>
-              </div>
-      
-              <div class="modal-column">
-                <h3>Results</h3>
-                <img src="assets/mechphoto.png" alt="" style="max-width:100%; height:auto;">
-                <p>The instrumented sleeve was designed to house the three sensors, the microcontroller and a power source so that real-time wireless data acquisition could be performed. This allowed the participant to walk normally, making the results 
-                more representative of their true gait pattern.</p>
-                <img src="assets/lastresult.png" alt="" style="max-width:100%; height:auto;">
-                <p>The data acquisition system was integrated with a graphical user interface (GUI) for real-time monitoring. As the participant walked, the knee angle would automatically update on the plot. The GUI also 
-                enabled the operator to view previous data and compare participant data to a healthy reference population to help identify any abnormalities.</p>
-                <img src="assets/gaitresult.png" alt="" style="max-width:100%; height:auto;">
-                <h3>Conclusion</h3>
-                <p>The Gait Guide offered an efficient, wearable solution for remotely monitoring knee recovery after total knee replacement. Using an Arduino-based system, it collected and analyzed gait data, and compared it to healthy benchmarks. This solution has the potential to enable clinicians to track progress more accurately and allow patients to practice exercises confidently at home, support data-driven rehabilitation.</p>
-              </div>
-            </div>
-      
-            <div class="project-highlight">
-              <h3>Remote Gait Lab - Live Demonstration</h3>
-              <a href="https://www.youtube.com/watch?v=SUwyz-0deLU" target="_blank" class="btn">Click to View!</a>
-            </div>
     </div>
     
     <!-- Master's Thesis modal -->
     <div id="masters-thesis" class="project-modal" aria-hidden="true" role="dialog" aria-label="Master's Thesis Details">
-      <button class="modal-close" onclick="toggleDetail('masters-thesis')" aria-label="Close">×</button>
-      <h2>Master's Thesis: Medical AI Research</h2>
-    
-      <div class="skill-badges">
-        <span>Python</span><span>Git</span><span>Version Control</span><span>Data Analysis</span>
-        <span>Medical Imaging</span><span>Image Processing</span><span>Technical Writing</span><span>R&D</span>
-      </div>
-    
-      <!-- Single Column Layout -->
-      <div class="modal-content">
-        <h3>The Problem</h3>
-        <p>Bone remodeling is a healthy, dynamic process where old bone is replaced by new bone. In the human body, this process is governed by the osteoblasts and the osteoclasts; 
-        specific cell types responsible for building and resorbing bone.</p>
-        <img src="assets/bone1.png" alt="" style="max-width:100%; height:auto;">
-        <p>As humans age, their osteoblasts and osteoclasts work synchronously to build their bones stronger. However, when peak bone mass is reached at about the age of 30,
-        bone resorption can begin to outpace bone formation, which is when osteoporosis occurs.</p>
-        <img src="assets/pic.png" alt="" style="max-width:100%; height:auto;">
-        <p>Osteoporosis causes the bones to become very porous and susceptible to fracture, which is why early diagnosis is very important.</p>
-        <p>Osteoporosis is diagnosed through Dual X-Ray Absorptiometry (DXA) imaging, which is a low radiation X-Ray imaging machine that can calculate the patient's Bone Mineral Density (BMD).</p>
-        <img src="assets/bone3.gif" alt="" style="max-width:100%; height:auto;">
-        <p>Osteoporosis is then diagnosed based on BMD, however many individuals with a normal BMD value for their age, sex, and ethnicity will still experience a fragility fracture.</p>
-        <p>This proves that bone fragility and inherent fracture risk cannot be determined from BMD alone.</p>
-    
-        <h3>The Impact</h3>
-        <p>Fragility fractures are often the first symptom of osteoporosis, which makes it challenging to accurately diagnose the disease before a fracture has occurred.</p>
-        <p>Hip fractures can be deadly. In Canada, 30,000 occur annually, and 50% of patients lose the ability to walk independently.</p>
-        <p>Mortality rates can reach as high as 30% within just the first 6 months post-fracture, and hip fractures result in $1.1 billion in direct healthcare costs annually.</p>
-    
-        <h3>The Solution</h3>
-        <p>Machine learning has the potential to improve fracture risk prediction.</p>
-        <p>Computers have the ability to decipher complex, non-linear, high-dimensional relationships that the human brain cannot.</p>
-        <p>This thesis aims to investigate if DXA images, alongside clinical risk factors, have the potential to improve fracture risk prediction.</p>
-    
-        <h3>Primary Research Objective</h3>
-        <p><strong>Evaluate the predictive power of DXA images and Clinical Risk Factors (CRFs) in quantifying hip fracture risk</strong></p>
-    
-        <div class="project-highlight">
-          <a href="assets/Taylor Kramer MASc. Thesis (1).pdf" target="_blank" class="btn pdf-btn">
-        📄 Click here to view my published thesis!
-      </a>
+      <div class="modal-content-wrapper">
+        <button class="modal-close" onclick="toggleDetail('masters-thesis')" aria-label="Close">×</button>
+        <h2>Master's Thesis: Medical AI Research</h2>
+      
+        <div class="skill-badges">
+          <span>Python</span><span>Git</span><span>Version Control</span><span>Data Analysis</span>
+          <span>Medical Imaging</span><span>Image Processing</span><span>Technical Writing</span><span>R&D</span>
+        </div>
+      
+        <!-- Single Column Layout -->
+        <div class="modal-content">
+          <h3>The Problem</h3>
+          <p>Bone remodeling is a healthy, dynamic process where old bone is replaced by new bone. In the human body, this process is governed by the osteoblasts and the osteoclasts; 
+          specific cell types responsible for building and resorbing bone.</p>
+          <img src="assets/bone1.png" alt="" style="max-width:100%; height:auto;">
+          <p>As humans age, their osteoblasts and osteoclasts work synchronously to build their bones stronger. However, when peak bone mass is reached at about the age of 30,
+          bone resorption can begin to outpace bone formation, which is when osteoporosis occurs.</p>
+          <img src="assets/pic.png" alt="" style="max-width:100%; height:auto;">
+          <p>Osteoporosis causes the bones to become very porous and susceptible to fracture, which is why early diagnosis is very important.</p>
+          <p>Osteoporosis is diagnosed through Dual X-Ray Absorptiometry (DXA) imaging, which is a low radiation X-Ray imaging machine that can calculate the patient's Bone Mineral Density (BMD).</p>
+          <img src="assets/bone3.gif" alt="" style="max-width:100%; height:auto;">
+          <p>Osteoporosis is then diagnosed based on BMD, however many individuals with a normal BMD value for their age, sex, and ethnicity will still experience a fragility fracture.</p>
+          <p>This proves that bone fragility and inherent fracture risk cannot be determined from BMD alone.</p>
+      
+          <h3>The Impact</h3>
+          <p>Fragility fractures are often the first symptom of osteoporosis, which makes it challenging to accurately diagnose the disease before a fracture has occurred.</p>
+          <p>Hip fractures can be deadly. In Canada, 30,000 occur annually, and 50% of patients lose the ability to walk independently.</p>
+          <p>Mortality rates can reach as high as 30% within just the first 6 months post-fracture, and hip fractures result in $1.1 billion in direct healthcare costs annually.</p>
+      
+          <h3>The Solution</h3>
+          <p>Machine learning has the potential to improve fracture risk prediction.</p>
+          <p>Computers have the ability to decipher complex, non-linear, high-dimensional relationships that the human brain cannot.</p>
+          <p>This thesis aims to investigate if DXA images, alongside clinical risk factors, have the potential to improve fracture risk prediction.</p>
+      
+          <h3>Primary Research Objective</h3>
+          <p><strong>Evaluate the predictive power of DXA images and Clinical Risk Factors (CRFs) in quantifying hip fracture risk</strong></p>
+      
+          <div class="project-highlight">
+            <a href="assets/Taylor Kramer MASc. Thesis (1).pdf" target="_blank" class="btn pdf-btn">
+          📄 Click here to view my published thesis!
+        </a>
+          </div>
         </div>
       </div>
     </div>
@@ -193,254 +197,258 @@
 
     <!-- SureStride Project Modal -->
     <div id="surestride" class="project-modal" aria-hidden="true" role="dialog" aria-label="SureStride Details">
-      <button class="modal-close" onclick="toggleDetail('surestride')" aria-label="Close">×</button>
-    
-      <h2>SureStride: Engineering Capstone Project</h2>
-    
-      <div class="skill-badges">
-        <span>Autodesk Inventor</span>
-        <span>MATLAB</span>
-        <span>Rapid Design Iteration</span>
-        <span>Hand Calculations</span>
-        <span>Rapid Prototyping</span>
-        <span>R&D</span>
+      <div class="modal-content-wrapper">
+        <button class="modal-close" onclick="toggleDetail('surestride')" aria-label="Close">×</button>
+      
+        <h2>SureStride: Engineering Capstone Project</h2>
+      
+        <div class="skill-badges">
+          <span>Autodesk Inventor</span>
+          <span>MATLAB</span>
+          <span>Rapid Design Iteration</span>
+          <span>Hand Calculations</span>
+          <span>Rapid Prototyping</span>
+          <span>R&D</span>
+        </div>
+      
+        <div class="modal-grid">
+          <!-- Column 1 -->
+          <div class="modal-column">
+            <h3>The Problem</h3>
+            <p> Older adults in nursing homes who use assistive mobility devices (AMDs) and have an increased risk
+                of falling require an intermediate AMD without the stability limitations of a walker or autonomy
+                limitations of a wheelchair to increase their quality of life, physical activity, and safety.
+            </p>
+      
+            <h3>The Impact</h3>
+            <p> Approximately 25% of seniors in nursing homes use wheelchairs, limiting their physical activity,
+                and leading to dependence on others. Wheelchair-use is also correlated with an increased risk
+                of depression, possibly due to restricted mobility and ability to socialize with others. The social
+                impacts of our design are to increase the autonomy of users, and consequently, their quality of life. 
+                The safety and health impacts of our design are therefore to decrease fall risk for users
+                and allow for physical activity. 
+            </p>
+      
+            <h3>The Solution</h3>
+            <p>
+              <strong> Design a mechatronic device with automatic electrical and mechanical resistance braking that is size adjustable and provides improved upper body support from a traditional walker. Ensure that the device initiates automatic braking if enhanced acceleration is detected, extreme wobbling is sensed, or an obstacle is detected.
+              </strong>
+            </p>
+      
+            <h3>Preliminary Design Iteration</h3>
+            <p>
+              Many initial concepts were explored, including a collapsible design. Once the prototype was built, it proved extremely unstable due to an imbalance in bending moments.
+              This exercise reaffirmed the value of rapid prototyping. Feedback from stakeholders, including nurses from assisted living homes, emphasized that no device could restrain the user,
+              while biomechanics experts advised that a collapsible design would likely be too weak and not feasible within the project timeframe. Based on this guidance,
+              the collapsible mechanism was removed from the final design.
+            </p>
+      
+            <br>
+            <img src="assets/collapse.png" alt="Preliminary CAD of collapsible design" style="max-width:100%; height:auto;">
+            <p>Preliminary CAD of collapsible design</p>
+            <img src="assets/print.png" alt="Preliminary prototype PLA" style="max-width:100%; height:auto;">
+            <p>Preliminary prototype (PLA)</p>
+            <img src="assets/moment.png" alt="Imbalance in bending moment" style="max-width:100%; height:auto;">
+            <p>Imbalance in bending moment</p>
+      
+            <h3>The Final Solution</h3>
+            <p>
+              <strong>
+                Design a mechatronic device with automatic electrical and mechanical resistance braking that is size adjustable and provides greater upper body support.
+              </strong>
+            </p>
+            <img src="assets/walker-sketch.png" alt="Walker sketch" style="max-width:100%; height:auto;">
+            <p>Size adjustability diagram</p>
+      
+            <h3>Adherence to Regulatory Standards</h3>
+            <ul>
+              <li>The device followed ISO 11199-3:2005, covering strength, durability, stability, braking, adjustment.</li>
+              <li>IEC 80601-2-78:2019 compliance ensured electrical and mechanical safety for medical devices, including protection from shocks, fire, moving parts, and electromagnetic interference.</li>
+              <li>CAN/CSA-Z604-03 (R2008) specified Canadian requirements for transportable mobility aids (design, labeling, testing, performance).</li>
+              <li>The prototype used aluminum; full compliance requires final materials, exact dimensions, and complete testing.</li>
+            </ul>
+          </div>
+      
+          <!-- Column 2 -->
+          <div class="modal-column">
+            <h3>Final Mechanical Outcomes</h3>
+            <p>
+              The mechanical prototype consisted of aluminum tubing that provided full body support, size adjustability in 5 locations,
+              mechanical disk brakes, and front swivel wheels for easy turning.
+            </p>
+            <img src="assets/surestride.jpg" alt="Final CAD model" style="max-width:100%; height:auto;">
+            <p>Final SolidWorks CAD model</p>
+            <img src="assets/walker.jpg" alt="Final manufactured assembly" style="max-width:100%; height:auto;">
+            <p>Final manufactured assembly at Capstone Showcase</p>
+            <img src="assets/size.png" alt="Size adjustability CAD highlight" style="max-width:100%; height:auto;">
+            <p>CAD highlight of size adjustability</p>
+            <img src="assets/brakes.png" alt="Mechanical disk brakes" style="max-width:100%; height:auto;">
+            <p>Mechanical disk brakes</p>
+      
+            <h3>Mechanical Validation</h3>
+            <p>
+              The device was validated for loading up to 100kg through Finite-Element Analysis (FEA):
+            </p>
+            <img src="assets/mesh.png" alt="FEA mesh" style="max-width:100%; height:auto;">
+            <p>Mesh for FEA</p>
+            <img src="assets/fea3.png" alt="Complete FEA" style="max-width:100%; height:auto;">
+            <p>Complete FEA for 100 kg loading (491N per support)</p>
+            <img src="assets/fea1.png" alt="FEA bend" style="max-width:100%; height:auto;">
+            <p>FEA result at bend: Safe loading for extreme maximum</p>
+            <img src="assets/fea2.png" alt="FEA hole" style="max-width:100%; height:auto;">
+            <p>FEA result at hole: Safe loading for extreme maximum</p>
+          </div>
+      
+          <!-- Column 3 -->
+          <div class="modal-column">
+            <h3>Final Electrical Outcomes</h3>
+            <p>
+              The final electrical system used sensors to detect speed, wobble, and nearby obstacles, allowing the walker to identify potential fall risks.
+              Based on these inputs, linear actuators automatically applied either light or strong braking resistance. User interaction was kept simple through
+              power and calibration switches, along with traffic-style LED feedback: green LED for power, yellow LED for minor braking, yellow+red LED for major braking.
+              All components were powered by a 12 V battery and controlled by an ESP32 microcontroller, which could also send braking data to a PC over Wi-Fi.
+            </p>
+            <img src="assets/elec.png" alt="Electrical component placement" style="max-width:100%; height:auto;">
+            <p>Location of electrical components on mechanical assembly</p>
+            <img src="assets/eleclogic.png" alt="Electrical logic flow chart" style="max-width:100%; height:auto;">
+            <p>Electrical logic flow chart</p>
+            <img src="assets/elecpurpose.png" alt="Electrical component purpose" style="max-width:100%; height:auto;">
+            <p>Component purpose diagram</p>
+            <img src="assets/major.png" alt="Major and minor braking" style="max-width:100%; height:auto;">
+            <p>Major and minor braking</p>
+            <img src="assets/actuator.png" alt="Linear actuators" style="max-width:100%; height:auto;">
+            <p>Electrical assembly for linear actuators used to drive automatic resistance braking</p>
+      
+            <h3>Electrical Validation</h3>
+            <p>
+              Various test cases were trialed to validate the electrical design:<br>
+              <strong>Switches:</strong> Verified by measuring voltage changes when toggled — confirmed functional.<br>
+              <strong>LEDs:</strong> Powered using a 3.3 V source with resistors — all illuminated correctly.<br>
+              <strong>Linear Actuators:</strong> Tested with 12 V supply — successfully extended and retracted by reversing polarity.<br>
+              <strong>Buck Converter:</strong> Output measured at 3.3 ± 0.02 V with minimal oscillation — passed.<br>
+              <strong>Battery:</strong> 12 V output confirmed at 12 ± 0.05 V — passed.<br>
+              <strong>Acceleration Sensor:</strong> Detected clear differences between soft and strong pushes; minimal acceleration during steady walking.<br>
+              <strong>Time-of-Flight Sensor:</strong> Distance readings accurate to within 1 mm when compared to manual measurements.<br>
+              <strong>Wobble Detection (Gyroscope):</strong> Simulated lateral falls were successfully detected using Euler angle thresholds.
+            </p>
+          </div>
+        </div>
+      
+        <!-- Project Outcome Highlight -->
+        <div class="project-highlight">
+          <h3>Final Result</h3>
+          <p>
+            Our prototype demonstrated <strong>full structural safety</strong> under load testing, <strong>reliable electrical performance</strong> across all use cases,
+            and met all primary <strong>design objectives for stability, adjustability, and usability</strong>.
+          </p>
+          <p> 
+            Our findings were published and presented at the 2024 IEEE International Conference on Smart Mobility!
+          </p>
+          <div style="margin-top: 8px;">
+            <a href="https://ieeexplore.ieee.org/document/10733430" target="_blank" style="color: #4aa3ff; text-decoration: underline;">Click here to view</a>
+          </div>
+          <p>
+            🏆 The project was <strong>selected among top submissions</strong> for presentation at the <strong>iBioMed Project Showcase</strong>,
+            recognizing our team's innovation and hard work!
+          </p>
+      
+          <h3>Personal Contributions</h3>
+          <p>
+            During this project, I contributed greatly to the mechanical subteam. I performed the complete mechanical validation process and designed all CAD models.
+            I contributed equally to the discussion of test plans for validation testing, group reports, and manufacturing the device.
+          </p>
+        </div>
+      
+        <!-- PDF link at bottom -->
+        <a href="assets/G02_FinalReport.pdf" target="_blank" class="btn pdf-btn">
+          📄 Click here to view our final report including engineering drawings and complete validation testing!
+        </a>
       </div>
-    
-      <div class="modal-grid">
-        <!-- Column 1 -->
-        <div class="modal-column">
-          <h3>The Problem</h3>
-          <p> Older adults in nursing homes who use assistive mobility devices (AMDs) and have an increased risk
-              of falling require an intermediate AMD without the stability limitations of a walker or autonomy
-              limitations of a wheelchair to increase their quality of life, physical activity, and safety.
-          </p>
-    
-          <h3>The Impact</h3>
-          <p> Approximately 25% of seniors in nursing homes use wheelchairs, limiting their physical activity,
-              and leading to dependence on others. Wheelchair-use is also correlated with an increased risk
-              of depression, possibly due to restricted mobility and ability to socialize with others. The social
-              impacts of our design are to increase the autonomy of users, and consequently, their quality of life. 
-              The safety and health impacts of our design are therefore to decrease fall risk for users
-              and allow for physical activity. 
-          </p>
-    
-          <h3>The Solution</h3>
-          <p>
-            <strong> Design a mechatronic device with automatic electrical and mechanical resistance braking that is size adjustable and provides improved upper body support from a traditional walker. Ensure that the device initiates automatic braking if enhanced acceleration is detected, extreme wobbling is sensed, or an obstacle is detected.
-            </strong>
-          </p>
-    
-          <h3>Preliminary Design Iteration</h3>
-          <p>
-            Many initial concepts were explored, including a collapsible design. Once the prototype was built, it proved extremely unstable due to an imbalance in bending moments.
-            This exercise reaffirmed the value of rapid prototyping. Feedback from stakeholders, including nurses from assisted living homes, emphasized that no device could restrain the user,
-            while biomechanics experts advised that a collapsible design would likely be too weak and not feasible within the project timeframe. Based on this guidance,
-            the collapsible mechanism was removed from the final design.
-          </p>
-    
-          <br>
-          <img src="assets/collapse.png" alt="Preliminary CAD of collapsible design" style="max-width:100%; height:auto;">
-          <p>Preliminary CAD of collapsible design</p>
-          <img src="assets/print.png" alt="Preliminary prototype PLA" style="max-width:100%; height:auto;">
-          <p>Preliminary prototype (PLA)</p>
-          <img src="assets/moment.png" alt="Imbalance in bending moment" style="max-width:100%; height:auto;">
-          <p>Imbalance in bending moment</p>
-    
-          <h3>The Final Solution</h3>
-          <p>
-            <strong>
-              Design a mechatronic device with automatic electrical and mechanical resistance braking that is size adjustable and provides greater upper body support.
-            </strong>
-          </p>
-          <img src="assets/walker-sketch.png" alt="Walker sketch" style="max-width:100%; height:auto;">
-          <p>Size adjustability diagram</p>
-    
-          <h3>Adherence to Regulatory Standards</h3>
-          <ul>
-            <li>The device followed ISO 11199-3:2005, covering strength, durability, stability, braking, adjustment.</li>
-            <li>IEC 80601-2-78:2019 compliance ensured electrical and mechanical safety for medical devices, including protection from shocks, fire, moving parts, and electromagnetic interference.</li>
-            <li>CAN/CSA-Z604-03 (R2008) specified Canadian requirements for transportable mobility aids (design, labeling, testing, performance).</li>
-            <li>The prototype used aluminum; full compliance requires final materials, exact dimensions, and complete testing.</li>
-          </ul>
-        </div>
-    
-        <!-- Column 2 -->
-        <div class="modal-column">
-          <h3>Final Mechanical Outcomes</h3>
-          <p>
-            The mechanical prototype consisted of aluminum tubing that provided full body support, size adjustability in 5 locations,
-            mechanical disk brakes, and front swivel wheels for easy turning.
-          </p>
-          <img src="assets/surestride.jpg" alt="Final CAD model" style="max-width:100%; height:auto;">
-          <p>Final SolidWorks CAD model</p>
-          <img src="assets/walker.jpg" alt="Final manufactured assembly" style="max-width:100%; height:auto;">
-          <p>Final manufactured assembly at Capstone Showcase</p>
-          <img src="assets/size.png" alt="Size adjustability CAD highlight" style="max-width:100%; height:auto;">
-          <p>CAD highlight of size adjustability</p>
-          <img src="assets/brakes.png" alt="Mechanical disk brakes" style="max-width:100%; height:auto;">
-          <p>Mechanical disk brakes</p>
-    
-          <h3>Mechanical Validation</h3>
-          <p>
-            The device was validated for loading up to 100kg through Finite-Element Analysis (FEA):
-          </p>
-          <img src="assets/mesh.png" alt="FEA mesh" style="max-width:100%; height:auto;">
-          <p>Mesh for FEA</p>
-          <img src="assets/fea3.png" alt="Complete FEA" style="max-width:100%; height:auto;">
-          <p>Complete FEA for 100 kg loading (491N per support)</p>
-          <img src="assets/fea1.png" alt="FEA bend" style="max-width:100%; height:auto;">
-          <p>FEA result at bend: Safe loading for extreme maximum</p>
-          <img src="assets/fea2.png" alt="FEA hole" style="max-width:100%; height:auto;">
-          <p>FEA result at hole: Safe loading for extreme maximum</p>
-        </div>
-    
-        <!-- Column 3 -->
-        <div class="modal-column">
-          <h3>Final Electrical Outcomes</h3>
-          <p>
-            The final electrical system used sensors to detect speed, wobble, and nearby obstacles, allowing the walker to identify potential fall risks.
-            Based on these inputs, linear actuators automatically applied either light or strong braking resistance. User interaction was kept simple through
-            power and calibration switches, along with traffic-style LED feedback: green LED for power, yellow LED for minor braking, yellow+red LED for major braking.
-            All components were powered by a 12 V battery and controlled by an ESP32 microcontroller, which could also send braking data to a PC over Wi-Fi.
-          </p>
-          <img src="assets/elec.png" alt="Electrical component placement" style="max-width:100%; height:auto;">
-          <p>Location of electrical components on mechanical assembly</p>
-          <img src="assets/eleclogic.png" alt="Electrical logic flow chart" style="max-width:100%; height:auto;">
-          <p>Electrical logic flow chart</p>
-          <img src="assets/elecpurpose.png" alt="Electrical component purpose" style="max-width:100%; height:auto;">
-          <p>Component purpose diagram</p>
-          <img src="assets/major.png" alt="Major and minor braking" style="max-width:100%; height:auto;">
-          <p>Major and minor braking</p>
-          <img src="assets/actuator.png" alt="Linear actuators" style="max-width:100%; height:auto;">
-          <p>Electrical assembly for linear actuators used to drive automatic resistance braking</p>
-    
-          <h3>Electrical Validation</h3>
-          <p>
-            Various test cases were trialed to validate the electrical design:<br>
-            <strong>Switches:</strong> Verified by measuring voltage changes when toggled — confirmed functional.<br>
-            <strong>LEDs:</strong> Powered using a 3.3 V source with resistors — all illuminated correctly.<br>
-            <strong>Linear Actuators:</strong> Tested with 12 V supply — successfully extended and retracted by reversing polarity.<br>
-            <strong>Buck Converter:</strong> Output measured at 3.3 ± 0.02 V with minimal oscillation — passed.<br>
-            <strong>Battery:</strong> 12 V output confirmed at 12 ± 0.05 V — passed.<br>
-            <strong>Acceleration Sensor:</strong> Detected clear differences between soft and strong pushes; minimal acceleration during steady walking.<br>
-            <strong>Time-of-Flight Sensor:</strong> Distance readings accurate to within 1 mm when compared to manual measurements.<br>
-            <strong>Wobble Detection (Gyroscope):</strong> Simulated lateral falls were successfully detected using Euler angle thresholds.
-          </p>
-        </div>
-      </div>
-    
-      <!-- Project Outcome Highlight -->
-      <div class="project-highlight">
-        <h3>Final Result</h3>
-        <p>
-          Our prototype demonstrated <strong>full structural safety</strong> under load testing, <strong>reliable electrical performance</strong> across all use cases,
-          and met all primary <strong>design objectives for stability, adjustability, and usability</strong>.
-        </p>
-        <p> 
-          Our findings were published and presented at the 2024 IEEE International Conference on Smart Mobility!
-        </p>
-        <div style="margin-top: 8px;">
-          <a href="https://ieeexplore.ieee.org/document/10733430" target="_blank" style="color: #4aa3ff; text-decoration: underline;">Click here to view</a>
-        </div>
-        <p>
-          🏆 The project was <strong>selected among top submissions</strong> for presentation at the <strong>iBioMed Project Showcase</strong>,
-          recognizing our team's innovation and hard work!
-        </p>
-    
-        <h3>Personal Contributions</h3>
-        <p>
-          During this project, I contributed greatly to the mechanical subteam. I performed the complete mechanical validation process and designed all CAD models.
-          I contributed equally to the discussion of test plans for validation testing, group reports, and manufacturing the device.
-        </p>
-      </div>
-    
-      <!-- PDF link at bottom -->
-      <a href="assets/G02_FinalReport.pdf" target="_blank" class="btn pdf-btn">
-        📄 Click here to view our final report including engineering drawings and complete validation testing!
-      </a>
     </div>
 
 
     <!-- BoundLess Crutches modal (full content) -->
     <div id="boundless-crutches" class="project-modal" aria-hidden="true" role="dialog" aria-label="BoundLess Crutches Details">
-      <button class="modal-close" onclick="toggleDetail('boundless-crutches')" aria-label="Close">×</button>
-
-      <h2>BoundLess Crutches: Pre-Engineering Capstone Project</h2>
-
-      <div class="skill-badges">
-        <span>Autodesk Inventor</span><span>MATLAB</span><span>Prototyping</span><span>Hand Calculations</span>
-      </div>
-
-      <div class="modal-grid">
-        <div class="modal-column">
-          <h3>The Problem</h3>
-          <p>Traditional axillary crutches transfer high forces directly to the user’s arms and shoulders, which can lead to nerve compression. Additionally, existing crutches are bulky, difficult to transport, and often unsafe on uneven terrain. Current portable crutch designs either require complicated assembly or risk losing parts, and spring-based crutches lack damping, which can create unstable forces on the user. There is no solution that simultaneously reduces harmful forces, improves portability, and maintains ease of use.</p>
-          <h3>The Impact</h3>
-          <p>The limitations of existing crutches can result in short- and long-term health consequences, including radial, ulnar, and median nerve palsies, which cause numbness, reduced dexterity, and muscle weakness. Users may also face inconvenience and safety risks due to the crutches’ size, poor traction on uneven terrain, and difficult portability. The lack of a comprehensive solution leaves users vulnerable to injury and limits mobility options for those who rely on crutches as their primary assistive device.</p>
-          <h3>The Solution</h3>
-          <p><strong>Design a lightweight, durable axillary crutch with a spring-damper system to reduce force on the arms and shoulders, featuring a compact, easy-to-fold mechanism and adjustable for various body types and terrains.</strong></p>
-
-          <h3>Preliminary Designs</h3>
-          <p>Many preliminary designs were created during the design process to optimize the collapsible mechanism of the design:<br>
-            <img src="assets/truss.jpg" alt="" style="max-width:100%; height:auto;"> <br>
-            Collapsible truss mechanism <br>
-            <img src="assets/tent.jpg" alt="" style="max-width:100%; height:auto;"> <br>
-            Detachable tent pole mechanism<br>
-            <img src="assets/poles.jpg" alt="" style="max-width:100%; height:auto;"> <br>
-            Telescoping pole mechanism <br>
-            Ultimately, it was decided that each of these designs had the potential to lack mechanical durability or would be difficult to actuate.
+      <div class="modal-content-wrapper">
+        <button class="modal-close" onclick="toggleDetail('boundless-crutches')" aria-label="Close">×</button>
+  
+        <h2>BoundLess Crutches: Pre-Engineering Capstone Project</h2>
+  
+        <div class="skill-badges">
+          <span>Autodesk Inventor</span><span>MATLAB</span><span>Prototyping</span><span>Hand Calculations</span>
+        </div>
+  
+        <div class="modal-grid">
+          <div class="modal-column">
+            <h3>The Problem</h3>
+            <p>Traditional axillary crutches transfer high forces directly to the user’s arms and shoulders, which can lead to nerve compression. Additionally, existing crutches are bulky, difficult to transport, and often unsafe on uneven terrain. Current portable crutch designs either require complicated assembly or risk losing parts, and spring-based crutches lack damping, which can create unstable forces on the user. There is no solution that simultaneously reduces harmful forces, improves portability, and maintains ease of use.</p>
+            <h3>The Impact</h3>
+            <p>The limitations of existing crutches can result in short- and long-term health consequences, including radial, ulnar, and median nerve palsies, which cause numbness, reduced dexterity, and muscle weakness. Users may also face inconvenience and safety risks due to the crutches’ size, poor traction on uneven terrain, and difficult portability. The lack of a comprehensive solution leaves users vulnerable to injury and limits mobility options for those who rely on crutches as their primary assistive device.</p>
+            <h3>The Solution</h3>
+            <p><strong>Design a lightweight, durable axillary crutch with a spring-damper system to reduce force on the arms and shoulders, featuring a compact, easy-to-fold mechanism and adjustable for various body types and terrains.</strong></p>
+  
+            <h3>Preliminary Designs</h3>
+            <p>Many preliminary designs were created during the design process to optimize the collapsible mechanism of the design:<br>
+              <img src="assets/truss.jpg" alt="" style="max-width:100%; height:auto;"> <br>
+              Collapsible truss mechanism <br>
+              <img src="assets/tent.jpg" alt="" style="max-width:100%; height:auto;"> <br>
+              Detachable tent pole mechanism<br>
+              <img src="assets/poles.jpg" alt="" style="max-width:100%; height:auto;"> <br>
+              Telescoping pole mechanism <br>
+              Ultimately, it was decided that each of these designs had the potential to lack mechanical durability or would be difficult to actuate.
+            </p>
+          </div>
+  
+          <div class="modal-column">
+            <h3>Final Design</h3>
+            <p>The final design inclluded a custom locking mechanism with an internal spring to be able to assemble and disassemble both sides of the device quickly and simultaneously. It also contained a spring/damper system with an adjustable preload mechanism for variable user weight and an adjustable crutch base for varied terrain.</p><br>
+            <img src="assets/design.png" alt="" style="max-width:100%; height:auto;"> <br>
+            Full design in CAD <br>
+            <img src="assets/locking.png" alt="" style="max-width:100%; height:auto;"> <br>
+            Detailed CAD of locking mechanism <br>
+            <img src="assets/assemble.png" alt="" style="max-width:100%; height:auto;"> <br>
+            Device disassembly <br>
+            <img src="assets/spr.png" alt="" style="max-width:100%; height:auto;"> <br>
+            Spring/damper system with elastic reload
+            <img src="assets/comp.png" alt="" style="max-width:100%; height:auto;"> <br>
+            Mechanism to create variable spring compression
+            <img src="assets/base.png" alt="" style="max-width:100%; height:auto;"> <br>
+            Variable design bases
+            
+          </div>
+  
+          <div class="modal-column">
+            <h3>Design Validation</h3>
+            <p>The objectives of this design were to: 1. Reduce the maximum force applied under the arm and at the hand during loading. 2: Reduce the rate of change of applied force through the loading phase. </p> <br>
+            <p>The parameters to optimize were: 1. Minimize the spring constant required to expand the crutch back to its original length once the loading is removed. 2. Minimize the damping constant that prevents oscillations when loaded.</p> <br>
+            <p>It was also critical to determine the points of failure of the device and compare the factor of safety for each potential failure locus against the overall design factor.</p> <br>
+            <img src="assets/spr1.png" alt="" style="max-width:100%; height:auto;"> <br>
+            <p>The minimum spring constant was found to be 22kN/m, based on the criteria that the crutch re-expands to its initial length by the end of the swing phase</p>
+            <img src="assets/dmp.png" alt="" style="max-width:100%; height:auto;"> <br>
+            <p>The minimum damping constant was found to be 2.6kNs/m, based on the criteria that the maximum force did not exceed body weight and does not oscillate</p><br>
+            <img src="assets/fail.png" alt="" style="max-width:100%; height:auto;"> <br>
+            <img src="assets/w2.png" alt="" style="max-width:100%; height:auto;"> <br>
+            <p>The following locations were found to be points of weakness</p><br>
+          </div>
+        </div>
+  
+        <div class="project-highlight">
+          <h3>Final Result</h3>
+          <p>
+            The design was found to reduce peak shoulder load, putting less strain on the brachial plexus and successfully mitigating intense loading on the shoulder during crutch use. The disassembly mechanism was
+            confirmed by stakeholders to be a good mechanism of transporting the device.
+          </p>
+        
+          <h3>Personal Contributions</h3>
+          <p>
+            During this project, I contributed to the CAD modeling and the numerical optimization through researching and assisting with the LaGrangian Analysis to optimize the parameters of the spring/damper system.
           </p>
         </div>
-
-        <div class="modal-column">
-          <h3>Final Design</h3>
-          <p>The final design inclluded a custom locking mechanism with an internal spring to be able to assemble and disassemble both sides of the device quickly and simultaneously. It also contained a spring/damper system with an adjustable preload mechanism for variable user weight and an adjustable crutch base for varied terrain.</p><br>
-          <img src="assets/design.png" alt="" style="max-width:100%; height:auto;"> <br>
-          Full design in CAD <br>
-          <img src="assets/locking.png" alt="" style="max-width:100%; height:auto;"> <br>
-          Detailed CAD of locking mechanism <br>
-          <img src="assets/assemble.png" alt="" style="max-width:100%; height:auto;"> <br>
-          Device disassembly <br>
-          <img src="assets/spr.png" alt="" style="max-width:100%; height:auto;"> <br>
-          Spring/damper system with elastic reload
-          <img src="assets/comp.png" alt="" style="max-width:100%; height:auto;"> <br>
-          Mechanism to create variable spring compression
-          <img src="assets/base.png" alt="" style="max-width:100%; height:auto;"> <br>
-          Variable design bases
-          
-        </div>
-
-        <div class="modal-column">
-          <h3>Design Validation</h3>
-          <p>The objectives of this design were to: 1. Reduce the maximum force applied under the arm and at the hand during loading. 2: Reduce the rate of change of applied force through the loading phase. </p> <br>
-          <p>The parameters to optimize were: 1. Minimize the spring constant required to expand the crutch back to its original length once the loading is removed. 2. Minimize the damping constant that prevents oscillations when loaded.</p> <br>
-          <p>It was also critical to determine the points of failure of the device and compare the factor of safety for each potential failure locus against the overall design factor.</p> <br>
-          <img src="assets/spr1.png" alt="" style="max-width:100%; height:auto;"> <br>
-          <p>The minimum spring constant was found to be 22kN/m, based on the criteria that the crutch re-expands to its initial length by the end of the swing phase</p>
-          <img src="assets/dmp.png" alt="" style="max-width:100%; height:auto;"> <br>
-          <p>The minimum damping constant was found to be 2.6kNs/m, based on the criteria that the maximum force did not exceed body weight and does not oscillate</p><br>
-          <img src="assets/fail.png" alt="" style="max-width:100%; height:auto;"> <br>
-          <img src="assets/w2.png" alt="" style="max-width:100%; height:auto;"> <br>
-          <p>The following locations were found to be points of weakness</p><br>
-        </div>
+        
+        <a href="assets/crutchreport.pdf" target="_blank" class="btn pdf-btn">
+          📄 Click here to view our final report!
+        </a>
       </div>
-
-      <div class="project-highlight">
-        <h3>Final Result</h3>
-        <p>
-          The design was found to reduce peak shoulder load, putting less strain on the brachial plexus and successfully mitigating intense loading on the shoulder during crutch use. The disassembly mechanism was
-          confirmed by stakeholders to be a good mechanism of transporting the device.
-        </p>
-      
-        <h3>Personal Contributions</h3>
-        <p>
-          During this project, I contributed to the CAD modeling and the numerical optimization through researching and assisting with the LaGrangian Analysis to optimize the parameters of the spring/damper system.
-        </p>
-      </div>
-      
-      <a href="assets/crutchreport.pdf" target="_blank" class="btn pdf-btn">
-        📄 Click here to view our final report!
-      </a>
     </div>
   </section>
 
