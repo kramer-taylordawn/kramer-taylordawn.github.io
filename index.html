@@ -1055,9 +1055,14 @@ function toggleDetail(id) {
     modal.style.display = 'block';
     modal.setAttribute('aria-hidden', 'false');
 
+    // PREVENT BACKGROUND SCROLL (IMPORTANT FIX)
+    document.body.classList.add("modal-open");
+
     setTimeout(() => {
       modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 50);
+  } else {
+    document.body.classList.remove("modal-open");
   }
 }
 
@@ -1071,6 +1076,7 @@ window.addEventListener('click', function (e) {
     ) {
       modal.style.display = 'none';
       modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove("modal-open");
     }
   });
 });
@@ -1106,19 +1112,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Image modal
-function openImg(img) {
-  const modal = document.getElementById("img-modal");
-  const modalImg = document.getElementById("img-modal-content");
-
-  modal.style.display = "flex";
-  modalImg.src = img.src;
-}
-
-function closeImgModal() {
-  document.getElementById("img-modal").style.display = "none";
-}
-
 // Cursor glow
 const glow = document.getElementById("cursor-glow");
 
@@ -1147,33 +1140,7 @@ function animateGlow() {
 animateGlow();
 </script>
 
-<div id="cursor-glow"></div>
-
-/* ===== FIX MODAL ALWAYS ON TOP ===== */
-
-</script>
-
-<style>
-/* ===== FIX MODAL ALWAYS ON TOP ===== */
-
-.project-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999999;
-  background: rgba(0, 0, 0, 0.8);
-  overflow-y: auto;
-  display: none;
-}
-
-/* inner modal content layering */
-.project-modal .modal-content,
-.project-modal .modal-grid,
-.project-modal h2,
-.project-modal .skill-badges {
-  position: relative;
+<div id="cursor-glow"></div>ition: relative;
   z-index: 2;
 }
 </style>
