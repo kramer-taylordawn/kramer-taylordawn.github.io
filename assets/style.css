@@ -233,23 +233,16 @@ section h2 {
 }
 
 .project-modal {
-  display: none; /* hidden by default */
-  position: fixed; /* overlay on top of everything */
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+
+  background: rgba(0, 0, 0, 0.85);
+  overflow-y: auto;
+
   z-index: 9999999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;       /* almost full width */
-  height: 80%;      /* almost full height */
-  background-color: #1c1c1c;
-  border-radius: 12px;
-  overflow-y: auto;     /* ONLY modal scrolls */
-  box-shadow: 0 0 20px rgba(0, 120, 255, 0.5);
-  z-index: 99999999;
-  padding: 20px;
-  color: #e0e0e0;
-  isolation: isolate;
-  overflow-y: auto; /* scroll if content is taller */
 }
 
 .projects-intro {
@@ -1824,12 +1817,16 @@ section,
 
 .modal-content-wrapper {
   position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 60px auto;
+
+  width: min(1200px, 92vw);
+  margin: 80px auto;
+
   background: #fff; /* or your theme */
   border-radius: 12px;
+
   padding: 30px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
 /* =========================
