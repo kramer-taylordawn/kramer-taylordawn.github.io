@@ -287,10 +287,6 @@ section h2 {
   z-index: 999999;
 }
 
-body.modal-open {
-  overflow: hidden;
-}
-
 /* Responsive modal grid */
 @media (max-width: 900px) {
   .modal-grid {
@@ -1819,7 +1815,7 @@ section,
 
 /* Each CAD section card */
 .cad-card {
-  background: #1c1c1c;
+  background: #2a2a2a; 
   border-radius: 12px;
   padding: 20px;
   border: 1px solid rgba(255,255,255,0.05);
@@ -2022,3 +2018,5 @@ section,
   height: 100%;
   border: none;
 }
+
+      
