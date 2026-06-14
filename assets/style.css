@@ -23,11 +23,14 @@ body {
 nav {
   position: fixed;
   top: 0;
-  background-color: #1c1c1c;
-  padding: 10px 20px;
+  left: 0;
   width: 100%;
   z-index: 1000;
-  display: flex;            /* aligns links in a row properly */
+
+  background-color: #1c1c1c;
+  padding: 10px 20px;
+
+  display: flex;
   align-items: center;
 }
 
@@ -36,7 +39,7 @@ nav a {
   margin-right: 40px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;          /* makes text bigger */
+  font-size: 18px;
   transition: 0.2s ease;
 }
 
@@ -48,6 +51,11 @@ nav a:hover {
 nav a.active {
   border-bottom: 2px solid #1e90ff;
   padding-bottom: 3px;
+}
+
+body {
+  margin: 0;
+  padding-top: 60px;
 }
 
 /* Section Styling */
