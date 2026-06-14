@@ -26,10 +26,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
-
   background-color: #1c1c1c;
-  padding: 10px 20px;
-
   display: flex;
   align-items: center;
 }
