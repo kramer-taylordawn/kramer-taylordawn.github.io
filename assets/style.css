@@ -1887,3 +1887,82 @@ section,
   cursor: pointer;
   font-weight: bold;
 }
+
+
+/* =========================
+   CAD ACCORDION (ISOLATED)
+   DOES NOT AFFECT EXPERIENCE SECTION
+========================= */
+
+.cad-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* CAD CARD */
+.cad-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 18px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cad-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* HEADER */
+.cad-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.cad-header p {
+  margin: 6px 0 0;
+  opacity: 0.8;
+}
+
+/* HIDDEN CONTENT (collapsed state) */
+.cad-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding-top: 0;
+}
+
+/* EXPANDED STATE */
+.cad-card.expanded .cad-content {
+  max-height: 2000px;
+  padding-top: 15px;
+}
+
+/* IMAGE GRID (2 per row) */
+.cad-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* IMAGE SIZING (fix huge images) */
+.cad-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.cad-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .cad-grid {
+    grid-template-columns: 1fr;
+  }
+}
