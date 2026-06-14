@@ -235,7 +235,7 @@ section h2 {
 .project-modal {
   display: none; /* hidden by default */
   position: fixed; /* overlay on top of everything */
-  z-index: 10000;
+  z-index: 9999999;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -248,6 +248,7 @@ section h2 {
   z-index: 99999999;
   padding: 20px;
   color: #e0e0e0;
+  isolation: isolate;
   overflow-y: auto; /* scroll if content is taller */
 }
 
@@ -1807,7 +1808,11 @@ section,
 /* =========================
    FIX: MODAL (highest layer)
 ========================= */
-
+#projects, section {
+  position: relative;
+  z-index: 1;
+}
+      
 .project-modal {
   position: fixed;
   inset: 0;
