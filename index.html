@@ -1092,18 +1092,16 @@ document.addEventListener("DOMContentLoaded", function () {
   /* =========================
      CLICK OUTSIDE TO CLOSE MODAL
   ========================== */
-  window.addEventListener("click", function (e) {
-    document.querySelectorAll(".project-modal").forEach(function (modal) {
-      if (
-        modal.style.display === "block" &&
-        !modal.contains(e.target) &&
-        !e.target.classList.contains("view-project")
-      ) {
+  document.querySelectorAll(".project-modal").forEach(function (modal) {
+    modal.addEventListener("click", function (e) {
+      // only close if clicking the DARK BACKDROP, not modal content
+      if (e.target === modal) {
         modal.style.display = "none";
         modal.setAttribute("aria-hidden", "true");
         document.body.classList.remove("modal-open");
       }
     });
+  
   });
 
 
