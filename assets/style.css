@@ -2001,3 +2001,18 @@ section,
     grid-template-columns: 1fr;
   }
 }
+
+
+.cad-video {
+  padding: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+}
+
+.cad-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
