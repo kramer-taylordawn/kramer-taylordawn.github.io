@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<div id="cursor-glow"></div>
 
   <!-- Navigation Bar (kept as you requested) -->
   <nav>
@@ -1112,35 +1113,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Cursor glow
-const glow = document.getElementById("cursor-glow");
-
-let mouseX = 0;
-let mouseY = 0;
-let currentX = 0;
-let currentY = 0;
-
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
-
-function animateGlow() {
-  currentX += (mouseX - currentX) * 0.12;
-  currentY += (mouseY - currentY) * 0.12;
-
-  if (glow) {
-    glow.style.left = currentX + "px";
-    glow.style.top = currentY + "px";
-  }
-
-  requestAnimationFrame(animateGlow);
-}
-
-animateGlow();
 </script>
-
-<div id="cursor-glow"></div>ition: relative;
-  z-index: 2;
-}
-</style>
+</body>
+</html>
