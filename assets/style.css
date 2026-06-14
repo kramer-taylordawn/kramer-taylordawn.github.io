@@ -1816,7 +1816,7 @@ section,
 
 /* Each CAD section card */
 .cad-card {
-  background: #2a2a2a; 
+  background-color: #1c1c1c
   border-radius: 12px;
   padding: 20px;
   border: 1px solid rgba(255,255,255,0.05);
