@@ -21,14 +21,11 @@ body {
 
 /* Navbar Styling */
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: fixed; 
+  top: 0; 
+  background-color: #1c1c1c; 
+  padding: 10px 20px; 
   z-index: 1000;
-  background-color: #1c1c1c;
-  display: flex;
-  align-items: center;
 }
 
 nav a {
