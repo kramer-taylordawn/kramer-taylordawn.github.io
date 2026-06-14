@@ -282,6 +282,15 @@ section h2 {
   padding: 20px 0;
 }
 
+.modal {
+  position: fixed;
+  z-index: 999999;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Responsive modal grid */
 @media (max-width: 900px) {
   .modal-grid {
