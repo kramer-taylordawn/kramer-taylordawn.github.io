@@ -9,6 +9,7 @@ body {
   background-color: #11193b;
   color: #e0e0e0;
   font-family: 'Calibri', sans-serif;
+  padding-top: 70px; /* adjust depending on navbar height */
   margin: 0;
 
   /* Faint grid */
@@ -20,11 +21,14 @@ body {
 
 /* Navbar Styling */
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: #1c1c1c;
   padding: 10px 20px;
+  width: 100%;
   z-index: 1000;
+  display: flex;            /* aligns links in a row properly */
+  align-items: center;
 }
 
 nav a {
@@ -32,10 +36,18 @@ nav a {
   margin-right: 40px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 18px;          /* makes text bigger */
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 nav a.active {
   border-bottom: 2px solid #1e90ff;
+  padding-bottom: 3px;
 }
 
 /* Section Styling */
