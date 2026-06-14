@@ -1067,32 +1067,27 @@ document.addEventListener("DOMContentLoaded", function () {
   window.toggleDetail = function (id) {
     const modal = document.getElementById(id);
     if (!modal) return;
-
+  
     const isOpen = modal.style.display === "block";
-
+  
     // close all modals
     document.querySelectorAll(".project-modal").forEach(function (m) {
       m.style.display = "none";
       m.setAttribute("aria-hidden", "true");
     });
-
+  
     // open clicked modal
     if (!isOpen) {
       modal.style.display = "block";
       modal.setAttribute("aria-hidden", "false");
-
+  
       // prevent background scroll
       document.body.classList.add("modal-open");
-
-      setTimeout(function () {
-        modal.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 50);
-
+  
     } else {
       document.body.classList.remove("modal-open");
     }
   };
-
 
   /* =========================
      CLICK OUTSIDE TO CLOSE MODAL
