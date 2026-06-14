@@ -1812,18 +1812,19 @@ section,
   position: fixed;
   inset: 0;
   display: none;
-  z-index: 9999999;
   background: rgba(0,0,0,0.85);
-  overflow: auto;
+  overflow-y: auto;
+  z-index: 9999999;
 }
 
-/* THIS is the key missing piece */
-.project-modal .modal-content-wrapper {
-  max-width: 1100px;
-  margin: 60px auto;
-  background: white; /* or your theme */
+.modal-content-wrapper {
   position: relative;
   z-index: 2;
+  max-width: 1200px;
+  margin: 60px auto;
+  background: #fff; /* or your theme */
+  border-radius: 12px;
+  padding: 30px;
 }
 
 /* =========================
